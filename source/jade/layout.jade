@@ -1,0 +1,28 @@
+﻿doctype html
+html(class="no-js", lang="en")
+    head
+        block includes
+        include meta
+        link(rel="stylesheet" href="#{css}style.css")
+        script(src="#{js}lib/modernizr-2.6.2.min.js")
+        script(src="//localhost:35729/livereload.js")
+        title Верстка
+    body
+        .site
+            .main
+                header.page-header
+                    block header
+                
+                div.page-content
+                    .container
+                        block content
+            
+        footer.page-footer
+            block footer
+
+        script
+            |window.jQuery || document.write('<script src="/js/lib/jquery-1.10.2.min.js"><\/script>')
+
+        block layers
+        block library
+        block init

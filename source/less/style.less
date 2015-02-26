@@ -1,0 +1,99 @@
+@import "bootstrap/bootstrap.less";
+@import "custom-variables.less";
+@import "custom-other.less";
+
+@import "_sprites.less";
+@import "icons.less";
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600,400italic&subset=latin,cyrillic-ext);
+
+@import "non-responsive.less";
+
+//@import "jquery.bxslider.less";
+
+
+//
+// == Общие элементы
+// ------------------------------------------------------------
+
+
+//
+// == Сетка
+// ------------------------------------------------------------
+
+.site {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+// ** Header
+.page-header {
+    padding: 0;
+    margin: 0;
+    border-bottom: 0;
+    color: #fff; 
+
+    >.container {
+        padding: 18px 42px 36px 15px;
+    }
+
+    .logo {
+        .make-xs-column(5);
+    }
+    
+    .location {
+        font-size: 13px;
+        margin-bottom: 12px;
+        margin-left: 10px; }
+
+    .extra {
+        .make-xs-column(7);
+    }
+
+    .additional-links {
+        .list-inline;
+        .make-xs-column(12);
+        text-align: right;
+        margin-bottom: 44px;
+
+        >li {
+            padding: 0 0 0 28px;
+        }
+    }
+
+
+    a {
+        color: #fff;
+        border-bottom-color: rgba(255, 255, 255, .3);
+    }
+
+}
+
+.header-block {
+    .make-xs-column(6);
+    padding-left: 78px + @grid-pad;
+
+    .text { 
+        font-size: 13px;
+    }
+
+    .num {
+        font-size: 24px;
+        line-height: 1em;
+        font-weight: 600;
+        margin-bottom: 4px;
+    }
+
+    &:before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 6px;
+        left: @grid-pad;
+        .sprite(@caret);
+    }
+}
+
+.phone-block:before {
+    .sprite-position(@phone);
+}

@@ -5,7 +5,7 @@
 @import "_sprites.less";
 @import "icons.less";
 
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600,400italic&subset=latin,cyrillic-ext);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,400italic&subset=latin,cyrillic-ext);
 
 @import "non-responsive.less";
 
@@ -16,35 +16,162 @@
 // == Общие элементы
 // ------------------------------------------------------------
 
+.reset-paragraphs {
+    p { 
+        margin: 0;
+        bottom: 0;
+    }
+}
+
+.inverted() {
+    color: #fff;
+
+    a {
+        color: #fff;
+        .link( rgba(255, 255, 255, .3) );
+    }
+}
+
+// ** Хлебные крошки
+.breadcrumbs {
+    .list-unstyled;
+    .clearfix;
+    margin: 18px 0 0;
+    background: #f4f4f4;
+    margin: 0 -@container-padding 20px;
+    padding: 10px @container-padding;
+    color: #6e666a;
+
+    a {
+        .link();
+    }
+
+    >li {
+        float: left;
+        position: relative;
+
+        &:before { 
+            .glyphicon;
+            content: "\e080";
+            position: absolute;
+            top: 6px;
+            left: 12px;
+            color: #aeaeae;
+            font-size: 7px;
+            display: none;
+        }
+    }
+
+    >li + li {
+        padding-left: 36px;
+
+        &:before {
+            display: block; 
+        }
+    }
+
+}
+
+
+// ** Pagination
+.pagination {
+  display: inline-block;
+  padding-left: 0;
+  margin: @line-height-computed 0;
+
+  > li {
+    display: inline; // Remove list-style and block-level defaults
+    > a,
+    > span {
+      position: relative;
+      float: left; // Collapse white-space
+      padding: @padding-base-vertical @padding-base-horizontal;
+      line-height: @line-height-base;
+      text-decoration: none;
+      color: @pagination-color;
+      background-color: @pagination-bg;
+      border: 1px solid @pagination-border;
+      margin-left: -1px;
+    }
+  }
+
+  > li > a,
+  > li > span {
+    &:hover,
+    &:focus {
+      color: @pagination-hover-color;
+      background-color: @pagination-hover-bg;
+      border-color: @pagination-hover-border;
+    }
+  }
+
+  > .active > a,
+  > .active > span {
+    &,
+    &:hover,
+    &:focus {
+      z-index: 2;
+      color: @pagination-active-color;
+      background-color: @pagination-active-bg;
+      border-color: @pagination-active-border;
+      cursor: default;
+    }
+  }
+
+  > .disabled {
+    > span,
+    > span:hover,
+    > span:focus,
+    > a,
+    > a:hover,
+    > a:focus {
+      color: @pagination-disabled-color;
+      background-color: @pagination-disabled-bg;
+      border-color: @pagination-disabled-border;
+      cursor: @cursor-disabled;
+    }
+  }
+}
+
+// ** Иконки
+
+.icon {
+    display: inline-block;
+}
+
+.icon-caret-inv {
+    .sprite(@cart-inv);
+}
+
 
 //
 // == Сетка
 // ------------------------------------------------------------
 
-.site {
-    width: 1000px;
-    margin: 0 auto;
+.page-content {
+    background: #fff;
 }
 
 // ** Header
 .page-header {
-    padding: 0;
+    padding-top: 18px;
+    padding-bottom: 36px;
     margin: 0;
     border-bottom: 0;
     color: #fff; 
 
-    >.container {
-        padding: 18px 42px 36px 15px;
-    }
-
     .logo {
         .make-xs-column(5);
+
+        img {
+            margin-left: -14px;
+        }
     }
     
     .location {
         font-size: 13px;
         margin-bottom: 12px;
-        margin-left: 10px; }
+    }
 
     .extra {
         .make-xs-column(7);
@@ -53,25 +180,20 @@
     .additional-links {
         .list-inline;
         .make-xs-column(12);
-        text-align: right;
+        .inverted();
         margin-bottom: 44px;
 
         >li {
-            padding: 0 0 0 28px;
+            padding: 0 28px 0 0;
         }
     }
 
-
-    a {
-        color: #fff;
-        border-bottom-color: rgba(255, 255, 255, .3);
-    }
 
 }
 
 .header-block {
     .make-xs-column(6);
-    padding-left: 78px + @grid-pad;
+    padding-left: 78px;
 
     .text { 
         font-size: 13px;
@@ -89,11 +211,251 @@
         display: block;
         position: absolute;
         top: 6px;
-        left: @grid-pad;
-        .sprite(@caret);
+        left: 0;
+        .sprite(@cart-circle-lg);
     }
 }
 
 .phone-block:before {
     .sprite-position(@phone);
+}
+
+// ** Main menu
+.main-menu {
+    background: #fff;
+    border: 0;
+    margin-left: -@container-padding;
+    margin-right: -@container-padding + @menu-corner-width;
+    margin-bottom: 0;
+    height: 70px;
+    border-radius: 0;
+
+    .nav>li>a {
+        padding: 25px @container-padding;
+        text-transform: uppercase;
+        color: @headings-color;
+        font-weight: 600;
+        border-right: 1px solid #efefef;
+        position: relative;
+
+        &:hover,
+        &:focus {
+            background:#fff;
+        }
+    }
+
+    .glyphicon-chevron-down {
+        position: absolute;
+        color: @brand-primary;
+        font-size: 12px;
+        right: 10px;
+        top: 30px;
+    }
+
+    &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 100%;
+        .sprite(@menu-corner);
+    }
+
+    .navbar-form {
+        margin-top: 18px;
+    }
+
+}
+
+.navbar-search {
+    margin-right: 0;
+    padding-right: 16px;
+
+    .btn  {
+        background: none;
+        border: 0;
+        color: @brand-primary;
+        position: absolute;
+        top: 8px;
+        right: 10px;
+        padding: 0;
+    }
+
+    .form-group {
+        position: relative;
+    }
+
+    .form-control {
+        font-weight: 600;
+        padding-right: 32px;
+        .placeholder(@headings-color);
+        width: 242px;
+    }
+}
+
+
+// ** Footer
+.footer-nav {
+    background: #f2f2f2;
+    border-top: 1px solid #e2e2e2;
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    ul {
+        .list-unstyled; 
+        color: #403232;
+        margin: 0;
+
+        >li >a {
+            color: #403232;
+        }
+
+    }
+
+    .lvl-1 {
+        .make-xs-column(3);
+
+        >li {
+            margin-bottom: 12px;
+            font-weight: bold;
+        }
+    }
+
+    .lvl-2 {
+        >li {
+            padding: 8px 0;
+
+            >a {
+                padding-left: 14px;
+                position: relative;
+
+                &:before {
+                    content: "\e080";
+                    .glyphicon;
+                    color: #b2b2b2;
+                    font-size: 8px;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    line-height: 20px;
+                }
+            }
+        }
+    }
+}
+
+.socials {
+    .clearfix; 
+
+    >a { 
+        .sprite-width(@sc-vk);
+        .sprite-height(@sc-vk);
+        .sprite-image(@sc-vk);
+        background-color: #252525;
+        border-radius: @sc-vk-width;
+        margin-right: 8px;
+        float: left;
+    }
+
+    .sc-vk       { .sprite-position(@sc-vk); }
+    .sc-facebook { .sprite-position(@sc-facebook); }
+    .sc-twitter  { .sprite-position(@sc-twitter); }
+    .sc-ok       { .sprite-position(@sc-ok); }
+    .sc-google   { .sprite-position(@sc-google); }
+
+}
+
+.copyright {
+    padding: 24px;
+    font-size: 13px;
+    .inverted();
+
+    .shop {
+        .make-xs-column(9);
+    }
+    .developer {
+        .make-xs-column(3);
+    }
+}
+
+
+//
+// == Статья
+// ------------------------------------------------------------
+
+.table {
+  > thead,
+  > tbody,
+  > tfoot {
+    > tr {
+      > th {
+        border: 2px solid @brand-primary;
+        border-width: 2px 0;
+      }
+    }
+  }
+}
+
+.article {
+    table { 
+        .table;
+    }
+
+    img {
+        &.right {
+            margin-left: @grid-pad;
+        }
+        &.left {
+            margin-right: @grid-pad;
+        }
+    }
+
+    ul,
+    ol {
+        padding-left: 12px;
+        list-style: none; 
+        margin-bottom: 24px;
+
+        >li { 
+            list-style:none; 
+            padding-left: 28px;
+            position: relative;
+
+            + li {
+                margin-top: 8px;
+            }
+
+            &:before {
+                display: block;
+                position: absolute;
+                left: 0;
+                top: 0;
+                color: @brand-primary;
+            }
+        }
+    }
+
+    ul {
+        >li:before {
+            content: "\2014";
+            font-weight: bold;
+        }
+    }
+
+    ol {
+        list-style: none; 
+        counter-reset: point; 
+
+        >li:before {
+            content: counter(point); 
+            counter-increment: point 1; 
+        }
+
+        >li:nth-child(-n+9)::before { 
+            content: "0"counter(point); 
+        }
+
+    }
+
+
 }

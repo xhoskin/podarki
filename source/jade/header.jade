@@ -1,22 +1,45 @@
+header.page-header
+    .container
+        .row
+            .logo
+                .location Мы в Нижнем Тагиле
+                img(src="#{img}logo.png").logo-pic
+
+            .extra
+                .row
+                    ul.additional-links
+                        li: a(href="#") О компании       
+                        li: a(href="#") Новости и Акции         
+                        li: a(href="#") Советы по оформлению
+
+                    .header-block.basket-block
+                        .title Корзина
+                        .num 0
+                        .text Положите товар или услугу
+
+                    .header-block.callback-block
+                        .title Телефон для связи
+                        .num 8 800 3000 600
+                        .text пн. - пт. с  10:00 до  19:00
 .container
-    .row
-        .logo
-            .location Мы в Нижнем Тагиле
-            img(src="#{img}logo.png").logo-pic
+    .navbar.main-menu 
+        ul.nav.navbar-nav 
+            li.dropdown.active 
+                a.dropdown-toggle(href="#", data-toggle="dropdown", role="button", aria-expanded="false")
+                    |Услуги
+                    span.glyphicon.glyphicon-chevron-down
+                ul.dropdown-menu(role="menu")
+                    li: a(href="#") Свадебный декор
+                    li: a(href="#") Детские праздники
+            li
+                a(href="#") Продукция              
+            li
+                a(href="#") Отзывы            
+            li
+                a(href="#") Контакты
+        
+         .navbar-form.navbar-right.navbar-search
+             .form-group
+                 input(type="text" class="form-control" placeholder="ПОИСК")
+                 button(type="submit" class="btn glyphicon glyphicon-search")
 
-        .extra
-            .row
-                ul.additional-links
-                    li: a(href="#") О компании       
-                    li: a(href="#") Новости и Акции         
-                    li: a(href="#") Советы по оформлению
-
-                .header-block.basket-block
-                    .title Корзина
-                    .num 0
-                    .text Положите товар или услугу
-
-                .header-block.callback-block
-                    .title Телефон для связи
-                    .num 8 800 3000 600
-                    .text пн. - пт. с  10:00 до  19:00

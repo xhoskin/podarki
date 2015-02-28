@@ -1,6 +1,7 @@
 // ** type
-a {
-    border-bottom: 1px solid rgba(194, 100, 158, .8);
+.link(@color: rgba(194, 100, 158, .4)) { 
+    border-bottom: 1px solid @color;
+    text-decoration: none;
 
     &:hover,
     &:focus {
@@ -9,9 +10,17 @@ a {
     }
 }
 
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  margin-top: 24px;
+  margin-bottom: 18px;
+}
 
 // ** grid
 .container {
-    padding: 0; 
+    padding: 0 @container-padding; 
 }
-

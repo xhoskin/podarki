@@ -25,14 +25,19 @@ header.page-header
     .navbar.main-menu 
         ul.nav.navbar-nav 
             li.dropdown.active 
-                a.dropdown-toggle(href="#", data-toggle="dropdown", role="button", aria-expanded="false")
+                a.dropdown-toggle(href="#", data-toggle="dropdown", role="button")
                     |Услуги
                     span.glyphicon.glyphicon-chevron-down
                 ul.dropdown-menu(role="menu")
                     li: a(href="#") Свадебный декор
                     li: a(href="#") Детские праздники
             li
-                a(href="#") Продукция              
+                a.dropdown-toggle(href="#", data-toggle="dropdown", role="button")
+                    |Продукция              
+                    span.glyphicon.glyphicon-chevron-down
+                ul.dropdown-menu(role="menu")
+                    li: a(href="#") Свадебный декор
+                    li: a(href="#") Детские праздники
             li
                 a(href="#") Отзывы            
             li
@@ -42,4 +47,3 @@ header.page-header
              .form-group
                  input(type="text" class="form-control" placeholder="ПОИСК")
                  button(type="submit" class="btn glyphicon glyphicon-search")
-

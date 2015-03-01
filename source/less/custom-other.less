@@ -24,3 +24,18 @@ h6, .h6 {
 .container {
     padding: 0 @container-padding; 
 }
+
+
+// ** nav
+.nav {
+  // Open dropdowns
+  .open > a {
+    &,
+    &:hover,
+    &:focus {
+      background-color: none;
+      border-color: none;
+    }
+  }
+}
+

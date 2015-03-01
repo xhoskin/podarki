@@ -4,7 +4,9 @@ html(class="no-js", lang="en")
         block includes
         include meta
         link(rel="stylesheet" href="#{css}style.css")
+        script(src="#{js}lib/jquery-1.10.2.min.js")
         script(src="#{js}lib/modernizr-2.6.2.min.js")
+        script(src="#{js}lib/bootstrap.min.js")
         script(src="//localhost:35729/livereload.js")
         title Верстка
     body
@@ -19,7 +21,7 @@ html(class="no-js", lang="en")
             block footer
 
         script
-            |window.jQuery || document.write('<script src="/js/lib/jquery-1.10.2.min.js"><\/script>')
+            |window.jQuery || document.write('')
 
         block layers
         block library

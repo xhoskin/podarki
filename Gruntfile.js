@@ -167,7 +167,7 @@ module.exports = function(grunt) {
                 tasks: ['sprite:all']
             },
             css: {
-                files: ['source/less/*.less'],
+                files: ['source/less/*.less', 'source/less/**/*.less'],
                 tasks: ['less:style'],
                 options: {
                     livereload: true,

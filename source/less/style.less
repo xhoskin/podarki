@@ -5,6 +5,9 @@
 @import "_sprites.less";
 @import "icons.less";
 
+@import "bootstrap-select-variables.less";
+@import "bootstrap-select.less";
+
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,400italic&subset=latin,cyrillic-ext);
 
 @import "non-responsive.less";
@@ -36,14 +39,14 @@
 .breadcrumbs {
     .list-unstyled;
     .clearfix;
-    margin: 18px 0 0;
     background: #f4f4f4;
-    margin: 0 -@container-padding 20px;
+    margin: -@container-padding -@container-padding 24px;
     padding: 10px @container-padding;
     color: #6e666a;
 
     a {
-        .link(@link-border-color);
+        color: @brand-primary;
+        .link();
     }
 
     >li {
@@ -60,6 +63,8 @@
             font-size: 7px;
             display: none;
         }
+
+
     }
 
     >li + li {
@@ -71,7 +76,6 @@
     }
 
 }
-
 
 // ** Pagination
 .pagination {
@@ -146,12 +150,11 @@
 }
 
 // ** Иконки
-
 .icon {
     display: inline-block;
 }
 
-.icon-caret-inv {
+.icon-cart-inv {
     .sprite(@cart-inv);
 }
 
@@ -162,6 +165,9 @@
 
 .page-content {
     background: #fff;
+    border-top: 1px solid #efefef;
+    padding-top: @container-padding;
+    padding-bottom: @container-padding;
 }
 
 // ** Header
@@ -247,7 +253,8 @@
         text-transform: uppercase;
         color: @headings-color;
         font-weight: 600;
-        border-right: 1px solid #efefef;
+        border-right: 1px solid #f4f4f4;
+        border-bottom: 0;
         position: relative;
 
         &:hover,
@@ -256,15 +263,25 @@
         }
     }
 
+    .nav>.active>a {
+        border-left: 1px solid #e8e8e8;
+        border-right: 1px solid #e8e8e8;
+
+        &,
+        &:hover,
+        &:focus {
+            background: #f4f4f4;
+        }
+    }
+
     .open > a {
         &,
         &:hover,
         &:focus {
             background:#fff;
-            border-right: 1px solid #efefef;
+            border-right: 1px solid #f4f4f4;
         }
     }
-
 
     .glyphicon-chevron-down {
         position: absolute;
@@ -408,6 +425,23 @@
     }
 }
 
+// ** sidebar
+
+.base-grid {
+    .make-row();
+
+    > .main {
+        .make-xs-column(9);
+    }
+
+    > .sidebar {
+        .make-xs-column(3);
+    }
+
+
+}
+
+
 
 //
 // == Статья
@@ -488,4 +522,233 @@
     }
 
 
+}
+
+
+//
+// == Главная страница
+// ------------------------------------------------------------
+
+.explainer {
+    .make-row();
+
+    .h1, h1, 
+    .h2, h2, 
+    .h3, h3, 
+    .h4, h4 {
+        margin-top: 0;
+    }
+
+    > .block {
+        .make-xs-column(6);
+    }
+
+}
+
+.homepage-banner {
+    margin-top: -@container-padding;
+}
+
+.teasers {
+    .make-row(@container-padding*2);
+    margin-bottom: @container-padding;
+    
+}
+
+.teaser-item {
+    .make-xs-column(4, 0);
+
+    .image { 
+        display: block;
+        position: relative;
+
+        &:after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 45px;
+            border: 24px solid #fff;
+            border-top: 0;
+            border-color: transparent transparent #fff;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    .title {
+        margin: 0 0 @line-height-computed;
+        font-weight: normal;
+    }
+
+    .text { 
+        padding: @line-height-computed @container-padding;
+    }
+
+}
+
+
+//
+// == Товары
+// ------------------------------------------------------------
+
+.products {
+    .make-row();
+    margin-bottom: -20px;
+}
+
+.product-item {
+    .make-xs-column(3);
+    position: relative;
+    text-align: center;
+    margin-bottom: 20px;
+
+    .image {
+        display: block;
+    }
+
+    .title,
+    .image {
+        margin-bottom: 10px;
+    }
+
+    .cart-btn {
+        margin-top: 28px;
+        display: none;
+        width: 155px;
+        position: absolute;
+        left: 50%;
+        margin-left: -77px;
+    }
+
+    &:hover {
+        z-index: 2;
+
+        .bg {
+            position: absolute;
+            top: -30px;
+            left: 0;
+            right: 0;
+            bottom: -20px - 70;
+            background: #fff;
+            .box-shadow(0 5px 16px rgba(7, 6, 6, 0.37));
+            border-radius: 3px;
+        }
+        .inner {
+            position: relative;
+        }
+        .cart-btn {
+            display: inline-block;
+        }
+    }
+
+}
+
+.cart-btn {
+    > .icon {
+        margin-bottom: -5px;
+        margin-left: 12px;
+    }
+}
+
+.base-grid > .main .product-item {
+    .make-xs-column(4);
+}
+
+.category + .category {
+    margin-top: @container-padding;
+}
+
+.filter {
+    padding-bottom: 16px;
+    margin-bottom: 16px;
+    border-bottom: 1px solid #e7e7e7;
+
+    .form-group { 
+        .make-xs-column(4);
+        margin-bottom: 0;
+
+    }
+}
+
+.side-menu { 
+    .list-unstyled;
+    .box-shadow(0 5px 9px rgba(7, 6, 6, 0.14));
+    background: #fff;
+    padding: 20px 12px;
+    position: relative;
+    margin: 0;
+
+    &:before {
+        content: "";
+        display: block;
+        background: url("@{img}cross-pattern.png") repeat-x;
+        height: 5px;
+        position: absolute;
+        top: 0;
+        left: 3px;
+        right: 3px;
+    }
+
+    &:after {
+        content: "";
+        display: block;
+        background: url("@{img}sidebar-pattern.png") no-repeat;
+        height: 5px;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+    }
+
+    >li {
+        padding: 8px 10px;
+
+        & + li {
+            margin-top: 4px;
+        }
+
+        &.active {
+            border-radius: @border-radius-large;
+            color: #fff;
+            background: @brand-primary;
+
+            >a,
+            >span { 
+                border-bottom: transparent;
+                color: #fff;
+                cursor: pointer;
+            }
+
+        }
+
+    }
+
+    .value {
+        color: #999;
+    }
+
+}
+
+&.affix {
+    position: fixed;
+    top: 20px;
+}
+
+&.affix-bottom {
+    position: absolute;
+}
+
+.product-pagination {
+    padding-top: 16px;
+    margin-top: 16px;
+    border-top: 1px solid #e7e7e7;
+
+    .pagination {
+        border: 0;
+        margin: 0 -12px; 
+        padding: 0;
+    }
 }

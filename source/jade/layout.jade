@@ -7,6 +7,7 @@ html(class="no-js", lang="en")
         script(src="#{js}lib/jquery-1.10.2.min.js")
         script(src="#{js}lib/modernizr-2.6.2.min.js")
         script(src="#{js}lib/bootstrap.min.js")
+        script(src="#{js}lib/bootstrap-select.min.js")
         script(src="//localhost:35729/livereload.js")
         title Верстка
     body
@@ -20,8 +21,7 @@ html(class="no-js", lang="en")
         footer.page-footer
             block footer
 
-        script
-            |window.jQuery || document.write('')
+        script(src="#{js}main.js")
 
         block layers
         block library

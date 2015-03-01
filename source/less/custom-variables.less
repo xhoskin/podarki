@@ -54,7 +54,7 @@
 
 @font-size-h1:            floor((@font-size-base * 2.6)); // ~36px
 @font-size-h2:            floor((@font-size-base * 2.15)); // ~30px
-@font-size-h3:            22px; // ~24px
+@font-size-h3:            24px; // ~24px
 @font-size-h4:            ceil((@font-size-base * 1.25)); // ~18px
 @font-size-h5:            @font-size-base;
 @font-size-h6:            ceil((@font-size-base * 0.85)); // ~12px
@@ -66,7 +66,7 @@
 
 //** By default, this inherits from the `<body>`.
 @headings-font-family:    inherit;
-@headings-font-weight:    500;
+@headings-font-weight:    700;
 @headings-line-height:    1.1;
 @headings-color:          #222;
 
@@ -103,8 +103,8 @@
 @line-height-small:         1.5;
 
 @border-radius-base:        2px;
-@border-radius-large:       2px;
-@border-radius-small:       2px;
+@border-radius-large:       4px;
+@border-radius-small:       1px;
 
 //** Global color for active items (e.g., navs or dropdowns).
 @component-active-color:    #fff;
@@ -144,9 +144,9 @@
 
 @btn-font-weight:                normal;
 
-@btn-default-color:              #333;
+@btn-default-color:              @text-color;
 @btn-default-bg:                 #fff;
-@btn-default-border:             #ccc;
+@btn-default-border:             #dddcdc;
 
 @btn-primary-color:              #fff;
 @btn-primary-bg:                 @brand-primary;
@@ -859,3 +859,5 @@
 @dl-horizontal-offset:        @component-offset-horizontal;
 //** Horizontal line color.
 @hr-border:                   @gray-lighter;
+
+@img:                         "/images/";

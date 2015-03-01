@@ -10,6 +10,17 @@
     }
 }
 
+.dotted(@color: rgba(194, 100, 158, .4)) { 
+    border-bottom: 1px dotted @color;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+        border-color: transparent;
+        text-decoration: none;
+    }
+}
+
 a {
     .link(@link-border-color);
 }
@@ -104,3 +115,34 @@ label {
     margin-bottom: 8px;
 }
 
+
+// ** tabs
+.nav-tabs {
+    background: #f3e9ef;
+    .box-shadow(inset 0 2px 5px rgba(7, 6, 6, 0.09));
+    margin: 0 -@container-padding;
+    padding: 16px 12px 0;
+
+    >li { 
+        padding: @nav-link-padding;
+
+        >a {
+            display: inline-block;
+            padding: 0;
+            border-bottom: 1px solid @link-border-color;
+            font-weight: bold;
+
+            &:hover,
+            &:focus {
+                background: none;
+                border-color: transparent;
+                border-radius: 0;
+            }
+        }
+
+        &.active {
+            background: #fff;
+        }
+
+    }
+}

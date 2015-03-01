@@ -3813,7 +3813,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   max-width: none;
 }
 .nav-tabs {
-  border-bottom: 1px solid #dddddd;
+  border-bottom: 1px solid #ffffff;
 }
 .nav-tabs > li {
   float: left;
@@ -3826,14 +3826,14 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   border-radius: 2px 2px 0 0;
 }
 .nav-tabs > li > a:hover {
-  border-color: #eeeeee #eeeeee #dddddd;
+  border-color: #ffffff #ffffff #ffffff;
 }
 .nav-tabs > li.active > a,
 .nav-tabs > li.active > a:hover,
 .nav-tabs > li.active > a:focus {
-  color: #555555;
-  background-color: #c2649e;
-  border: 1px solid #dddddd;
+  color: #222222;
+  background-color: #ffffff;
+  border: 1px solid #ffffff;
   border-bottom-color: transparent;
   cursor: default;
 }
@@ -5596,6 +5596,31 @@ label {
   font-weight: normal;
   margin-bottom: 8px;
 }
+.nav-tabs {
+  background: #f3e9ef;
+  -webkit-box-shadow: inset 0 2px 5px rgba(7, 6, 6, 0.09);
+  box-shadow: inset 0 2px 5px rgba(7, 6, 6, 0.09);
+  margin: 0 -30px;
+  padding: 16px 12px 0;
+}
+.nav-tabs > li {
+  padding: 10px 15px;
+}
+.nav-tabs > li > a {
+  display: inline-block;
+  padding: 0;
+  border-bottom: 1px solid #acc5d9;
+  font-weight: bold;
+}
+.nav-tabs > li > a:hover,
+.nav-tabs > li > a:focus {
+  background: none;
+  border-color: transparent;
+  border-radius: 0;
+}
+.nav-tabs > li.active {
+  background: #fff;
+}
 /*
 LESS variables are information about icon's compiled state, stored under its original file name
 
@@ -6621,7 +6646,7 @@ body {
   padding-right: 10px;
   margin-bottom: 0;
 }
-.side-menu {
+.side-block {
   padding-left: 0;
   list-style: none;
   -webkit-box-shadow: 0 5px 9px rgba(7, 6, 6, 0.14);
@@ -6630,6 +6655,36 @@ body {
   padding: 20px 12px;
   position: relative;
   margin: 0;
+}
+.side-block:after {
+  content: "";
+  display: block;
+  background: url("/images/sidebar-pattern.png") no-repeat;
+  height: 5px;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+}
+.side-block > li {
+  padding: 8px 10px;
+}
+.side-block > li + li {
+  margin-top: 4px;
+}
+.side-block > li.active {
+  border-radius: 4px;
+  color: #fff;
+  background: #c2649e;
+}
+.side-block > li.active > a,
+.side-block > li.active > span {
+  border-bottom: transparent;
+  color: #fff;
+  cursor: pointer;
+}
+.side-block .value {
+  color: #999;
 }
 .side-menu:before {
   content: "";
@@ -6640,36 +6695,6 @@ body {
   top: 0;
   left: 3px;
   right: 3px;
-}
-.side-menu:after {
-  content: "";
-  display: block;
-  background: url("/images/sidebar-pattern.png") no-repeat;
-  height: 5px;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  right: 0;
-}
-.side-menu > li {
-  padding: 8px 10px;
-}
-.side-menu > li + li {
-  margin-top: 4px;
-}
-.side-menu > li.active {
-  border-radius: 4px;
-  color: #fff;
-  background: #c2649e;
-}
-.side-menu > li.active > a,
-.side-menu > li.active > span {
-  border-bottom: transparent;
-  color: #fff;
-  cursor: pointer;
-}
-.side-menu .value {
-  color: #999;
 }
 .affix {
   position: fixed;
@@ -6687,4 +6712,65 @@ body {
   border: 0;
   margin: 0 -12px;
   padding: 0;
+}
+.product-price {
+  padding-bottom: 28px;
+  margin-bottom: 28px;
+  border-bottom: 1px solid #e3e3e3;
+}
+.product-price:before,
+.product-price:after {
+  content: " ";
+  display: table;
+}
+.product-price:after {
+  clear: both;
+}
+.product-price:before,
+.product-price:after {
+  content: " ";
+  display: table;
+}
+.product-price:after {
+  clear: both;
+}
+.product-price .title,
+.product-price .value {
+  font-weight: bold;
+  color: #222222;
+}
+.product-price .title {
+  float: left;
+  font-size: 16px;
+  line-height: 46px;
+}
+.product-price .value {
+  font-size: 18px;
+  float: right;
+  white-space: nowrap;
+}
+.product-price .value .num {
+  font-size: 32px;
+}
+.product-price .counting {
+  font-size: 14px;
+  color: #777;
+  font-weight: normal;
+  display: block;
+}
+.order-block .cart-btn {
+  display: block;
+  margin-bottom: 28px;
+}
+.delivery-info {
+  margin: 16px 0 0;
+}
+.delivery-info > .title {
+  font-weight: bold;
+}
+.delivery-info > .value {
+  color: #777;
+}
+.product-description {
+  margin-bottom: 36px;
 }

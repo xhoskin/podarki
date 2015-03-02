@@ -172,7 +172,7 @@
 
 // ** Header
 .page-header {
-    padding-top: 18px;
+    padding-top: 36px;
     padding-bottom: 36px;
     margin: 0;
     border-bottom: 0;
@@ -355,6 +355,7 @@
 
         >li >a {
             color: #403232;
+            border: 0;
         }
 
     }
@@ -539,6 +540,11 @@
         margin-top: 0;
     }
 
+    .h1, h1 {
+        font-size: 42px;
+        text-transform: uppercase;
+    }
+
     > .block {
         .make-xs-column(6);
     }
@@ -552,7 +558,6 @@
 .teasers {
     .make-row(@container-padding*2);
     margin-bottom: @container-padding;
-    
 }
 
 .teaser-item {
@@ -567,9 +572,9 @@
             position: absolute;
             bottom: 0;
             left: 45px;
-            border: 24px solid #fff;
+            border: 24px solid #f7f7f7;
             border-top: 0;
-            border-color: transparent transparent #fff;
+            border-color: transparent transparent #f7f7f7;
         }
 
         img {
@@ -580,6 +585,8 @@
 
     .title {
         margin: 0 0 @line-height-computed;
+        font-size: 18px;
+        line-height: 1.5em;
         font-weight: normal;
     }
 
@@ -587,6 +594,37 @@
         padding: @line-height-computed @container-padding;
     }
 
+    &.second {
+        .text { 
+            border-left: 1px solid #f2f2f2;
+        }
+    }
+
+    &.special {
+        background: #fff;
+
+        &:after {
+            content: "";
+            display: block;
+            position: absolute;
+            top: -1px;
+            right: -1px;
+            width: 137px;
+            height: 103px;
+            background: url("@{img}specials.png") no-repeat;
+        }
+
+        .image:after {
+            border: 24px solid #fff;
+            border-color: transparent transparent #fff;
+        }
+    }
+
+}
+
+.homepage-teasers {
+    background: #f7f7f7;
+    border-bottom: 1px solid #e6e6e6;
 }
 
 
@@ -657,8 +695,14 @@
     .make-xs-column(4);
 }
 
-.category + .category {
-    margin-top: @container-padding;
+.category {
+    border-top: 1px solid #f4f4f4;
+    padding: 36px 0;
+}
+
+.category-title  {
+    margin-top: 0;
+    margin-bottom: 36px;
 }
 
 .filter {
@@ -813,3 +857,122 @@
 .product-description {
     margin-bottom: 36px; 
 }
+
+// ** Корзина
+.basket-list {
+    border-top: 1px solid #e9e9e9;
+    margin-bottom: 20px;
+}
+
+.basket-item {
+    border-bottom: 1px solid #e9e9e9;
+    min-height: 84px;
+
+    .cell {
+        position: relative;
+        float: left;
+        min-height: 1px;
+        padding-left: @grid-pad;
+        padding-right: @grid-pad;
+    }
+
+    .image   { width: 11%; }
+    .title   { width: 34%; }
+    .price   { width: 14%; }
+    .counter { width: 18%; }
+    .remove  { width: 8.5%; text-align: right; padding-top: 21px; }
+    .price-total { text-align: right;  }
+
+    .image-cell {
+        padding-top: 12px;
+        padding-bottom: 12px;
+    }
+
+    .text-cell {
+        padding-top: 30px;
+    }
+
+    .control-cell {
+        padding-top: 23px;
+    }
+}
+
+.counter-control-set {
+    padding: 0 26px;
+    position: relative;
+
+    >a {
+        position: absolute;
+        top: 8px;
+        border: 0;
+    }
+
+    .counter-down {
+        left: 0;
+        .sprite(@minus-red);
+    }
+
+    .counter-up {
+        right: 0;
+        .sprite(@plus-red);
+    }
+
+    .form-control {
+        text-align: center;
+    }
+
+
+}
+
+.remove-basket-item {
+    font-size: 36px;
+    line-height: 36px;
+    color: #d9d9d9;
+    border-bottom: 0;
+}
+
+.add-basket-btn {
+    color: @link-color;
+    padding: 10px 50px 10px 24px;
+    font-size: 16px;
+    position: relative;
+    border: 1px solid #d9d9d9;
+
+    &:after {
+        content: "+";
+        font-size: 42px;
+        line-height: 42px;
+        color: #d9d9d9;
+        position: absolute;
+        top: -1px;
+        right: 14px;
+        font-weight: 600;
+    }
+
+}
+
+.basket-confirm {
+    .product-price {
+        padding-bottom: 14px;
+        margin-bottom: 20px;
+
+        >.title {
+            float: none;
+            line-height: normal;
+        }
+        .value {
+            float: none;
+        }
+    }
+    .delivery-status {
+        color: #777;
+    }
+
+    .cart-btn {
+        width: 100%;
+        display: block;
+        margin-bottom: 36px;
+    }
+
+}
+

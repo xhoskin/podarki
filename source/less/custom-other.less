@@ -112,7 +112,28 @@ label {
     color: #777;
     font-size: 13px;
     font-weight: normal;
-    margin-bottom: 8px;
+    margin-bottom: 5px;
+}
+
+textarea.form-control {
+    resize:none;
+    height: 90px;
+}
+
+.form-control {
+    font-size: 13px;
+}
+
+.radio { 
+    label { padding-left: 26px; }
+
+    input[type="radio"],
+    .ez-radio {
+        position: absolute;
+        left: 0;
+        top: 3px;
+        margin: 0;
+    }
 }
 
 
@@ -130,7 +151,6 @@ label {
             display: inline-block;
             padding: 0;
             border-bottom: 1px solid @link-border-color;
-            font-weight: bold;
 
             &:hover,
             &:focus {

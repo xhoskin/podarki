@@ -7,6 +7,7 @@
 
 @import "bootstrap-select-variables.less";
 @import "bootstrap-select.less";
+@import "ezmark.less";
 
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,400italic&subset=latin,cyrillic-ext);
 
@@ -953,8 +954,9 @@
 
 .basket-confirm {
     .product-price {
-        padding-bottom: 14px;
-        margin-bottom: 20px;
+        margin-bottom: 0;
+        padding-bottom: 0;
+        border: 0;
 
         >.title {
             float: none;
@@ -965,7 +967,10 @@
         }
     }
     .delivery-status {
-        color: #777;
+        &,
+        a(href="#") {
+            color: #777;
+        }
     }
 
     .cart-btn {
@@ -976,3 +981,37 @@
 
 }
 
+.order-btn-wrap {
+    margin-top: 14px;
+    padding-top: 20px;
+    border-top: 1px solid #e3e3e3;
+}
+
+
+.delivery-radio {
+    label {
+        font-size: 14px;
+    }
+    .title  {
+        font-weight: bold;
+        font-size: 16px;
+        margin-bottom: 8px;
+        color: @headings-color;
+    }
+    .other {
+        font-size: 13px;
+        color: #777
+    }
+}
+
+.phone-span { 
+    white-space: nowrap;
+}
+
+.address-group {
+    padding-left: 26px;
+}
+
+.submit-group {
+    margin: 24px 0 0;
+}

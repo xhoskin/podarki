@@ -1,5 +1,8 @@
 $(document).ready(function(){
+
+    // custom controls
     $('.selectpicker').selectpicker();
+    $('input[type="radio"]').ezMark();
 
     var makeEqualHeight = function(el){
         var maxHeight = 0;

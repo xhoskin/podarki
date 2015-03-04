@@ -1,0 +1,62 @@
+//Главная страница
+//макет
+
+//Базовый шаблон
+extends jade/layout
+ 
+//Подключение mixin
+append includes
+ 
+// Подключение библиотек скриптов
+append library
+
+    
+// Инициализация скриптов
+append init
+
+//----------------------------------------------------------------------------------------------------
+
+// Шапка
+append header
+    include jade/header
+    
+//Контент
+append content
+
+    ul.breadcrumbs
+        li: a(href="#") Главная
+        li: span Контакты
+
+    h1.page-title Контакты
+
+    .contacts-grid
+        .row
+            .col-xs-4
+                p Контактный телефон: 
+                p: strong 8 800 3000 600
+                p: small E-mail: 
+                   a(href="#") pochta@mail.ru
+
+            .col-xs-5
+                p График работы:
+                p: strong с 10:00 до 19:00 пн.-пт.
+
+            .col-xs-3.btn-col
+                a(href="#").btn.btn-primary НАПИСАТЬ ПИСЬМО
+
+            .col-xs-12.address-col
+                p Наш адрес: 
+                p: strong Нижний-Тагил, ул. Ленина, дом 48, офис 1.
+
+    .map-container
+        .map-placeholder
+            p Здесь будет карта.
+                br
+            p Вставить ее 
+                strong вместо 
+                |элемента .map-placeholder.
+        img(src="#{img}map-marker-image.png" style="position:absolute; top:50%; left:50%;")
+
+
+append footer
+    include jade/footer

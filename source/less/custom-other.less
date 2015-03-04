@@ -56,7 +56,8 @@ p {
 
 // ** buttons
 .btn {
-  .button-size(@padding-base-vertical; 18px; @font-size-base; @line-height-base; @border-radius-base);
+  .button-size(8px; 18px; @font-size-base; @line-height-base; @border-radius-base);
+  font-weight: 600;
 }
 
 .btn-primary {
@@ -113,6 +114,10 @@ label {
     font-size: 13px;
     font-weight: normal;
     margin-bottom: 5px;
+
+    small {
+        font-size: 12px;
+    }
 }
 
 textarea.form-control {
@@ -179,5 +184,9 @@ textarea.form-control {
 }
 
 .modal-body {
-    padding: 32px 20px;
+    padding: 32px;
+}
+
+.modal-title {
+    margin-bottom: 12px;
 }

@@ -1,3 +1,5 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,400italic&subset=latin,cyrillic-ext);
+
 @import "bootstrap/bootstrap.less";
 @import "custom-variables.less";
 @import "custom-other.less";
@@ -8,8 +10,6 @@
 @import "bootstrap-select-variables.less";
 @import "bootstrap-select.less";
 @import "ezmark.less";
-
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,400italic&subset=latin,cyrillic-ext);
 
 @import "non-responsive.less";
 
@@ -443,6 +443,17 @@
 
 }
 
+.sidebar-section {
+    margin-top: 36px;
+}
+
+.image-section {
+    >img {
+        width: 100%;
+        height: auto;
+    }
+}
+
 
 
 //
@@ -838,8 +849,11 @@
 }
 
 .order-block {
-    .cart-btn {
+    .btn {
         display: block;
+        margin-bottom: 16px;
+    }
+    .buttons {
         margin-bottom: 28px;    
     }
 }
@@ -1024,4 +1038,74 @@
         text-align: center;
         font-size: 18px;
     }
+}
+
+.more-wrap {
+    margin-top: 36px;
+}
+
+.order-conclusion {
+    font-weight: 600;
+    font-size: 18px;
+    padding: 10px 0;
+    border: 1px solid #c2649e;
+    border-width: 1px 0;
+    margin-bottom: 24px;
+
+    .title {
+        .make-xs-column(8);
+    }
+    .price {
+        .make-xs-column(4);
+        text-align: right;
+    }
+}
+
+.quick-order-form {
+    textarea.form-control {
+        height: 180px;
+    }
+}
+
+
+// ** Контакты
+.contacts-grid {
+    font-size: 16px;
+    .reset-paragraphs;
+
+    strong {
+        font-weight: 600;
+        font-size: 18px;
+        color: @headings-color;
+    }
+
+    small { 
+        font-size: 13px;
+        line-height: 1.2em;
+    }
+
+    .btn-col {
+        text-align: right;
+    }
+
+    .address-col {
+        margin-top: 20px;
+    }
+
+}
+
+.map-container {
+    margin: 24px -@container-padding -@container-padding;
+    height: 515px;
+    position: relative;
+}
+
+.map-placeholder {
+    background: #d3e4c8;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: @container-padding;
 }

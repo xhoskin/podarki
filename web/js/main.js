@@ -17,7 +17,8 @@ $(document).ready(function(){
         }
     }
 
-    makeEqualHeight( $('.homepage-teasers>.teaser-item>.text') );
+   makeEqualHeight( $('.teasers>.teaser-item>.text') );
+
 });
 
 $(window).load(function(){

@@ -80,9 +80,9 @@
 
 // ** Pagination
 .pagination {
-  margin: 0 -@container-padding;
+  margin: 0 -@container-padding -@container-padding;
   padding: 26px @container-padding - 12px;
-  border-top: 1px solid #e6e6e6;
+  border-top: 1px solid #f2f2f2;
   margin-top: 42px;
   .clearfix;
 
@@ -149,6 +149,7 @@
   }
 
 }
+
 
 // ** Иконки
 .icon {
@@ -604,12 +605,8 @@
 
     .text { 
         padding: @line-height-computed @container-padding;
-    }
-
-    &.second {
-        .text { 
-            border-left: 1px solid #f2f2f2;
-        }
+        border-right: 1px solid #f2f2f2;
+        border-bottom: 1px solid #f2f2f2;
     }
 
     &.special {
@@ -632,11 +629,33 @@
         }
     }
 
+    .date {
+        color: #777;
+        margin-bottom: 16px;
+    }
+
+}
+
+.news-teasers {
+    margin-bottom: 0;
+
+    .teaser-item {
+        .text {
+            background: #fff;
+        }
+        .image:after { 
+            border-bottom-color: #fff;
+        }
+    }
 }
 
 .homepage-teasers {
     background: #f7f7f7;
     border-bottom: 1px solid #e6e6e6;
+}
+
+.news-pagination {
+    margin-top: -1px;
 }
 
 
@@ -1122,7 +1141,6 @@
     }
 
 }
-
 
 .review-item {
     text-align: center;

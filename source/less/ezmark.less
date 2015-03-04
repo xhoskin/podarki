@@ -1,0 +1,22 @@
+﻿/**
+ * CSS File for ezMark jQuery Plugin
+ *
+ **/
+.ez-hide { opacity: 0; filter:alpha(opacity=0); }
+.ez-checkbox {
+	background: transparent url('../images/checkbox-red.png') 0 1px no-repeat;
+	display:inline-block;
+}
+
+.ez-radio {
+    .sprite(@radio);
+    cursor: pointer;
+
+    input[type="radio"] {
+        .sprite-width(@radio);
+        .sprite-height(@radio);
+    }
+}
+
+.ez-checked { background-position: 0 -18px; }
+.ez-selected { .sprite-position(@radio-act); }

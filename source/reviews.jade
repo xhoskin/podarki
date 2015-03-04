@@ -1,0 +1,49 @@
+//Главная страница
+//макет
+
+//Базовый шаблон
+extends jade/layout
+ 
+//Подключение mixin
+append includes
+ 
+// Подключение библиотек скриптов
+append library
+
+    
+// Инициализация скриптов
+append init
+
+//----------------------------------------------------------------------------------------------------
+
+// Шапка
+append header
+    include jade/header
+    
+//Контент
+append content
+
+    ul.breadcrumbs
+        li: a(href="#") Главная
+        li: span Отзывы
+
+    h1.page-title Отзывы
+
+    .reviews-counter Довольны нами 
+        strong 503 человека
+
+    .review-item
+        .stars
+            i.star
+            i.star
+            i.star
+            i.star
+            i.star
+        .title Наталья, Нижний Тагил
+        .text Мне понравился данный магазин. Очень грамотные дизайнеры, приехали бесплатно и помогли с оформлением. Спасибо, вы мне очень помогли!
+
+    .review-submit 
+        a(href="#").btn.btn-primary ОСТАВИТЬ СВОЙ ОТЗЫВ
+
+append footer
+    include jade/footer

@@ -1,0 +1,165 @@
+//Главная страница
+//макет
+
+//Базовый шаблон
+extends jade/layout
+ 
+//Подключение mixin
+append includes
+ 
+// Подключение библиотек скриптов
+append library
+
+    
+// Инициализация скриптов
+append init
+
+//----------------------------------------------------------------------------------------------------
+
+// Шапка
+append header
+    include jade/header
+    
+//Контент
+append content
+
+    ul.breadcrumbs
+        li: a(href="#") Главная
+        li: a(href="#") Продукты
+        li: a(href="#") Для свадьбы
+        li: span Шары
+
+    h1.page-title Продукция
+
+    .base-grid.product-description
+        .main
+            .category
+                h3.category-title 
+                    a(href="#") Для свадьбы
+                    small 450 товаров
+                .products
+                    .product-item 
+                        media.image
+                            a(href="#"): img(src="http://placehold.it/220x220")
+                        .text
+                            .title: a(href="#") Новогодние яички
+                            .price 120 руб.
+                    .product-item 
+                        media.image
+                            a(href="#"): img(src="http://placehold.it/220x220")
+                        .text
+                            .title: a(href="#") Новогодние яички
+                            .price 120 руб.
+                    .product-item 
+                        media.image
+                            a(href="#"): img(src="http://placehold.it/220x220")
+                        .text
+                            .title: a(href="#") Новогодние яички
+                            .price 120 руб.
+
+            .category
+                h3.category-title  
+                    a(href="#") Для нового года
+                    small 120 товаров
+                .products
+                    .product-item 
+                        media.image
+                            a(href="#"): img(src="http://placehold.it/220x220")
+                        .text
+                            .title: a(href="#") Новогодние яички
+                            .price 120 руб.
+                    .product-item 
+                        media.image
+                            a(href="#"): img(src="http://placehold.it/220x220")
+                        .text
+                            .title: a(href="#") Новогодние яички
+                            .price 120 руб.
+                    .product-item 
+                        media.image
+                            a(href="#"): img(src="http://placehold.it/220x220")
+                        .text
+                            .title: a(href="#") Новогодние яички
+                            .price 120 руб.
+
+            .category
+                h3.category-title  
+                    a(href="#") Фейерверки
+                    small 100 товаров
+                .products
+                    .product-item 
+                        media.image
+                            a(href="#"): img(src="http://placehold.it/220x220")
+                        .text
+                            .title: a(href="#") Новогодние яички
+                            .price 120 руб.
+                    .product-item 
+                        media.image
+                            a(href="#"): img(src="http://placehold.it/220x220")
+                        .text
+                            .title: a(href="#") Новогодние яички
+                            .price 120 руб.
+                    .product-item 
+                        media.image
+                            a(href="#"): img(src="http://placehold.it/220x220")
+                        .text
+                            .title: a(href="#") Новогодние яички
+                            .price 120 руб.
+
+
+        .sidebar
+            .affix-block
+                ul.side-menu.side-block
+                    li.active
+                        span Шары
+                        = " "
+                        span.value 120
+                    li
+                        a(href="#") Фейерверк
+                        = " "
+                        span.value 120
+                    li
+                        a(href="#") Платья
+                        = " "
+                        span.value 120
+                    li
+                        a(href="#") Открытки
+                        = " "
+                        span.value 120
+                    li
+                        a(href="#") Hand made
+                        = " "
+                        span.value 120
+                    li
+                        a(href="#") На стол
+                        = " "
+                        span.value 120
+                    li
+                        a(href="#") Цветы
+                        = " "
+                        span.value 120
+                    li
+                        a(href="#") Подарки для мужчин
+                        = " "
+                        span.value 120
+                    li
+                        a(href="#") Подарки для женщин
+                        = " "
+                        span.value 120
+                    li
+                        a(href="#") Подарки для детей
+                        = " "
+                        span.value 120
+
+    article.article
+        h2 Воздушные шары
+
+        p Что подарить друзьям и подругам, родным и знакомым на Новый год, День Валентина, 23 февраля, 8 Марта,  День рождения, юбилей, свадьбу и другие торжества? А еще начальнику нужно подобрать подарок и коллегам что-нибудь недорогое... Ломать голову над выбором подарков нам приходится так часто, что иногда мы от этого устаем. 
+
+        p Интернет-магазин "ПОДАРКИ 66.ру", мы надеемся, хотя бы отчасти поможет Вам избавиться от "головной боли" при выборе подарков. Подарки для мужчин и женщин, коллег, шефа (а ведь у него все есть!), друзей и знакомых - мы постарались подобрать такие полезные и забавные подарки, которые Вам приятно будет дарить, а получателю подарка ни за что не захочется его передаривать! 
+
+        h3 Доставка
+
+        p Доставка подарков на дом или в офис по Нижнему Тагилу от 2500 рублей - БЕСПЛАТНО. Покупку можно оплатить как наличными курьеру, так и по безналичному расчету или кредитными картами Visa и MasterCard.
+
+append footer
+    include jade/footer

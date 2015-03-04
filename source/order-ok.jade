@@ -1,0 +1,102 @@
+//Главная страница
+//макет
+
+//Базовый шаблон
+extends jade/layout
+ 
+//Подключение mixin
+append includes
+ 
+// Подключение библиотек скриптов
+append library
+
+    
+// Инициализация скриптов
+append init
+
+//----------------------------------------------------------------------------------------------------
+
+// Шапка
+append header
+    include jade/header
+    
+//Контент
+append content
+
+    ul.breadcrumbs
+        li: a(href="#") Главная
+        li: a(href="#") Продукты
+        li: a(href="#") Для свадьбы
+        li: span Корзина
+
+    h1.page-title Оформление заказа
+
+    .base-grid.product-description
+        .main
+            .h4 Выберите способ получения заказа
+
+            form
+                .row
+                    .col-xs-6
+                        .radio.delivery-radio
+                            label
+                                input(type="radio" name="optionsRadios" checked)
+                                .title Доставка
+                                .price По Нижнему Тагилу  от 120 руб.
+                                .other Подробней уточняйте у менеджера по телефону 
+                                    .phone-span 8 800 3000 600
+                        .form-group.address-group
+                            label Укажите адрес
+                            textarea.form-control
+                    .col-xs-6.delivery-radio
+                        .radio
+                            label
+                                input(type="radio" name="optionsRadios" )
+                                .title Самовывоз
+                                .price Бесплатно
+                                .other г. Нижнний Тагил, ул.  Ленина, дом 48, офис 1
+                .row
+                    .col-xs-6
+                        .h4 Контактные данные 
+                        .form-group
+                            label Ваше имя
+                            input(type="text").form-control
+                        .form-group
+                            label Телефон для связи (обязательное поле)
+                            input(type="text").form-control
+                        .form-group
+                            label E-mail
+                            input(type="text").form-control
+                        .form-group
+                            label Комментарий к заказу
+                            textarea.form-control
+                        .form-group.submit-group
+                            button(type="submit").btn.btn-primary ОТПРАВИТЬ ЗАКАЗ
+
+
+        .sidebar
+            .side-block.basket-confirm
+                .product-price
+                    .title Сумма заказа
+                    .delivery-status: a(href="#") 4 товара
+                    .value 
+                        span.num 30 400
+                        = " "
+                        | руб.
+
+append footer
+    include jade/footer
+
+    .modal.ok-modal.fade#ok-modal
+        .modal-dialog
+            .modal-content
+                button.close.modal-close(type='button', data-dismiss='modal') &times;
+                .modal-body
+                    img(src="#{img}ok-image.png")
+                    h2 Спасибо за заказ
+                    p В ближайшее время с вами свяжутся наши специалисты
+                    button.btn.btn-primary(type='button', data-dismiss='modal') ХОРОШО, ЖДУ
+
+
+    script 
+        |$(document).ready(function(){ $('#ok-modal').modal('show') });

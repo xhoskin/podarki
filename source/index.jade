@@ -1,0 +1,155 @@
+//Главная страница
+//макет
+
+//Базовый шаблон
+extends jade/layout
+ 
+//Подключение mixin
+append includes
+ 
+// Подключение библиотек скриптов
+append library
+
+    
+// Инициализация скриптов
+append init
+
+//----------------------------------------------------------------------------------------------------
+
+// Шапка
+append header
+    include jade/header
+    
+//Контент
+append content
+
+    .homepage-banner 
+        .teasers.homepage-teasers
+            .teaser-item
+                media.image
+                    a(href="#"): img(src="http://placehold.it/332x182")
+                .text 
+                    h4.title: СВАДЕБНЫЙ ДЕКОР
+                    p Красивые и безумные, шумные и громкие.. Только профессионалы с слиензией
+                    a(href="#").btn.btn-primary Подробнее
+            .teaser-item.second
+                media.image
+                    a(href="#"): img(src="http://placehold.it/332x182")
+                .text 
+                    h4.title: СВАДЕБНЫЙ ДЕКОР
+                    p Красивые и безумные, шумные и громкие.. Только профессионалы с слиензией
+                    a(href="#").btn.btn-primary Подробнее
+            .teaser-item.special
+                media.image
+                    a(href="#"): img(src="http://placehold.it/332x182")
+                .text 
+                    h4.title: a(href="#") Распродажа новогодней атрибутики
+                    p Красивые и безумные, шумные и громкие.. Только профессионалы с слиензией
+
+    .explainer
+        .block
+            h1 
+                |Популярные 
+                br
+                |товары
+        .block
+            p У нас вы сможете подобрать  нужные для себя вещи для оформления свадеб, дней рождения и любых других праздиников, работаем мы в городе Нижнем Тагиле. Бесплатная доставка от 1000 руб.
+            p 
+                a(href="#") Подробнее
+
+    .category
+        h3.category-title 
+            a(href="#") Для свадьбы
+            small 450 товаров
+        .products
+            .product-item 
+                media.image
+                    a(href="#"): img(src="http://placehold.it/220x220")
+                .text
+                    .title: a(href="#") Новогодние яички
+                    .price 120 руб.
+            .product-item 
+                media.image
+                    a(href="#"): img(src="http://placehold.it/220x220")
+                .text
+                    .title: a(href="#") Новогодние яички
+                    .price 120 руб.
+            .product-item 
+                media.image
+                    a(href="#"): img(src="http://placehold.it/220x220")
+                .text
+                    .title: a(href="#") Новогодние яички
+                    .price 120 руб.
+            .product-item 
+                media.image
+                    a(href="#"): img(src="http://placehold.it/220x220")
+                .text
+                    .title: a(href="#") Новогодние яички
+                    .price 120 руб.
+
+    .category
+        h3.category-title  
+            a(href="#") Для нового года
+            small 120 товаров
+        .products
+            .product-item 
+                media.image
+                    a(href="#"): img(src="http://placehold.it/220x220")
+                .text
+                    .title: a(href="#") Новогодние яички
+                    .price 120 руб.
+            .product-item 
+                media.image
+                    a(href="#"): img(src="http://placehold.it/220x220")
+                .text
+                    .title: a(href="#") Новогодние яички
+                    .price 120 руб.
+            .product-item 
+                media.image
+                    a(href="#"): img(src="http://placehold.it/220x220")
+                .text
+                    .title: a(href="#") Новогодние яички
+                    .price 120 руб.
+            .product-item 
+                media.image
+                    a(href="#"): img(src="http://placehold.it/220x220")
+                .text
+                    .title: a(href="#") Новогодние яички
+                    .price 120 руб.
+
+    .category
+        h3.category-title  
+            a(href="#") Фейерверки
+            small 100 товаров
+        .products
+            .product-item 
+                media.image
+                    a(href="#"): img(src="http://placehold.it/220x220")
+                .text
+                    .title: a(href="#") Новогодние яички
+                    .price 120 руб.
+            .product-item 
+                media.image
+                    a(href="#"): img(src="http://placehold.it/220x220")
+                .text
+                    .title: a(href="#") Новогодние яички
+                    .price 120 руб.
+            .product-item 
+                media.image
+                    a(href="#"): img(src="http://placehold.it/220x220")
+                .text
+                    .title: a(href="#") Новогодние яички
+                    .price 120 руб.
+            .product-item 
+                media.image
+                    a(href="#"): img(src="http://placehold.it/220x220")
+                .text
+                    .title: a(href="#") Новогодние яички
+                    .price 120 руб.
+
+    
+    
+    
+    
+append footer
+    include jade/footer

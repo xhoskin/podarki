@@ -1,0 +1,122 @@
+//Главная страница
+//макет
+
+//Базовый шаблон
+extends jade/layout
+ 
+//Подключение mixin
+append includes
+ 
+// Подключение библиотек скриптов
+append library
+
+    
+// Инициализация скриптов
+append init
+
+//----------------------------------------------------------------------------------------------------
+
+// Шапка
+append header
+    include jade/header
+    
+//Контент
+append content
+
+    ul.breadcrumbs
+        li: a(href="#") Главная
+        li: span Новости
+
+    h1.page-title Новости
+
+    .teasers.news-teasers
+        .teaser-item
+            media.image
+                a(href="#"): img(src="http://placehold.it/332x182")
+            .text 
+                .date 17 декабря 2015
+                h4.title: a(href="#") Свадебный декор
+        .teaser-item
+            media.image
+                a(href="#"): img(src="http://placehold.it/332x182")
+            .text 
+                .date 17 декабря 2015
+                h4.title: a(href="#") Свадебный декор
+        .teaser-item.special
+            media.image
+                a(href="#"): img(src="http://placehold.it/332x182")
+            .text 
+                .date 17 декабря 2015
+                h4.title: a(href="#") Распродажа новогодней атрибутики
+        .teaser-item
+            media.image
+                a(href="#"): img(src="http://placehold.it/332x182")
+            .text 
+                .date 17 декабря 2015
+                h4.title: a(href="#") Свадебный декор
+        .teaser-item
+            media.image
+                a(href="#"): img(src="http://placehold.it/332x182")
+            .text 
+                .date 17 декабря 2015
+                h4.title: a(href="#") Распродажа новогодней атрибутики Свадебный декор
+        .teaser-item
+            media.image
+                a(href="#"): img(src="http://placehold.it/332x182")
+            .text 
+                .date 17 декабря 2015
+                h4.title: a(href="#") Свадебный декор
+        .teaser-item
+            media.image
+                a(href="#"): img(src="http://placehold.it/332x182")
+            .text 
+                .date 17 декабря 2015
+                h4.title: a(href="#") Распродажа новогодней атрибутики Свадебный декор
+        .teaser-item
+            media.image
+                a(href="#"): img(src="http://placehold.it/332x182")
+            .text 
+                .date 17 декабря 2015
+                h4.title: a(href="#") Свадебный декор
+        .teaser-item
+            media.image
+                a(href="#"): img(src="http://placehold.it/332x182")
+            .text 
+                .date 17 декабря 2015
+                h4.title: a(href="#") Распродажа новогодней атрибутики Свадебный декор
+        .teaser-item
+            media.image
+                a(href="#"): img(src="http://placehold.it/332x182")
+            .text 
+                .date 17 декабря 2015
+                h4.title: a(href="#") Свадебный декор
+        .teaser-item
+            media.image
+                a(href="#"): img(src="http://placehold.it/332x182")
+            .text 
+                .date 17 декабря 2015
+                h4.title: a(href="#") Распродажа новогодней атрибутики Свадебный декор
+        .teaser-item
+            media.image
+                a(href="#"): img(src="http://placehold.it/332x182")
+            .text 
+                .date 17 декабря 2015
+                h4.title: a(href="#") Свадебный декор
+        .teaser-item
+            media.image
+                a(href="#"): img(src="http://placehold.it/332x182")
+            .text 
+                .date 17 декабря 2015
+                h4.title: a(href="#") Распродажа новогодней атрибутики Свадебный декор
+
+    ul.pagination.news-pagination
+        li.disabled: a(href="#").previous &larr;
+        li.active: a(href="#") 1
+        li: a(href="#") 2
+        li: a(href="#") 3
+        li: a(href="#").next &rarr;
+
+    
+
+append footer
+    include jade/footer

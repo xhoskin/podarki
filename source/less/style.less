@@ -80,9 +80,9 @@
 
 // ** Pagination
 .pagination {
-  margin: 0 -@container-padding;
+  margin: 0 -@container-padding -@container-padding;
   padding: 26px @container-padding - 12px;
-  border-top: 1px solid #e6e6e6;
+  border-top: 1px solid #f2f2f2;
   margin-top: 42px;
   .clearfix;
 
@@ -604,12 +604,8 @@
 
     .text { 
         padding: @line-height-computed @container-padding;
-    }
-
-    &.second {
-        .text { 
-            border-left: 1px solid #f2f2f2;
-        }
+        border-right: 1px solid #f2f2f2;
+        border-bottom: 1px solid #f2f2f2;
     }
 
     &.special {
@@ -632,6 +628,24 @@
         }
     }
 
+    .date {
+        color: #777;
+        margin-bottom: 16px;
+    }
+
+}
+
+.news-teasers {
+    margin-bottom: 0;
+
+    .teaser-item {
+        .text {
+            background: #fff;
+        }
+        .image:after { 
+            border-bottom-color: #fff;
+        }
+    }
 }
 
 .homepage-teasers {
@@ -639,6 +653,9 @@
     border-bottom: 1px solid #e6e6e6;
 }
 
+.news-pagination {
+    margin-top: -1px;
+}
 
 //
 // == Товары
@@ -1108,4 +1125,49 @@
     right: 0;
     bottom: 0;
     padding: @container-padding;
+}
+
+// ** Отзывы
+.reviews-counter {
+    font-size: 16px;
+
+    strong {
+        font-weight: 600;
+        font-size: 28px;
+        color: @headings-color;
+        margin-left: 8px;
+    }
+
+}
+
+.review-item {
+    text-align: center;
+    font-size: 18px;
+    padding: 75px 260px;
+
+    .title {
+        font-weight: 600;
+        margin-bottom: 20px;
+    }
+
+    .text {
+        font-style: italic;
+        .reset-paragraphs;
+    }
+
+}
+
+.stars {
+    text-align: center;
+    margin-bottom: 20px;
+
+    .star {
+        .sprite(@star);
+        display: inline-block;
+        padding: 0 3px;
+    }
+}
+
+.review-submit {
+    text-align: center;
 }

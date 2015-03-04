@@ -5554,6 +5554,7 @@ p {
   line-height: 1.42857143;
   border-radius: 2px;
   font-weight: 600;
+  text-transform: uppercase;
 }
 .btn-primary {
   border-top: 1px solid #a94884 !important;
@@ -5963,7 +5964,7 @@ This must be run when you have at least 2 sprites.
 }
 .ez-radio {
   background-image: url(/images/sprite.png);
-  background-position: -392px -20px;
+  background-position: -412px -19px;
   width: 18px;
   height: 18px;
   cursor: pointer;
@@ -5976,7 +5977,7 @@ This must be run when you have at least 2 sprites.
   background-position: 0 -18px;
 }
 .ez-selected {
-  background-position: -412px 0px;
+  background-position: -392px -39px;
 }
 body {
   min-width: 1000px;
@@ -6052,9 +6053,9 @@ body {
   display: block;
 }
 .pagination {
-  margin: 0 -30px;
+  margin: 0 -30px -30px;
   padding: 26px 18px;
-  border-top: 1px solid #e6e6e6;
+  border-top: 1px solid #f2f2f2;
   margin-top: 42px;
 }
 .pagination:before,
@@ -6139,7 +6140,7 @@ body {
 }
 .icon-cart-inv {
   background-image: url(/images/sprite.png);
-  background-position: -322px -82px;
+  background-position: -322px -101px;
   width: 26px;
   height: 24px;
 }
@@ -6235,12 +6236,12 @@ body {
   top: 6px;
   left: 0;
   background-image: url(/images/sprite.png);
-  background-position: 0px -394px;
+  background-position: 0px -413px;
   width: 62px;
   height: 62px;
 }
 .phone-block:before {
-  background-position: -64px -330px;
+  background-position: -64px -349px;
 }
 .main-menu {
   background: #fff;
@@ -6293,7 +6294,7 @@ body {
   top: 0;
   left: 100%;
   background-image: url(/images/sprite.png);
-  background-position: -128px -258px;
+  background-position: -128px -277px;
   width: 42px;
   height: 70px;
 }
@@ -6416,19 +6417,19 @@ body {
   float: left;
 }
 .socials .sc-vk {
-  background-position: -262px -138px;
+  background-position: -292px -127px;
 }
 .socials .sc-facebook {
-  background-position: -202px -198px;
+  background-position: -262px -157px;
 }
 .socials .sc-twitter {
-  background-position: -292px -108px;
+  background-position: -232px -187px;
 }
 .socials .sc-ok {
-  background-position: -232px -168px;
+  background-position: -172px -247px;
 }
 .socials .sc-google {
-  background-position: -172px -228px;
+  background-position: -202px -217px;
 }
 .copyright {
   padding: 24px;
@@ -6647,9 +6648,8 @@ body {
 }
 .teaser-item .text {
   padding: 20px 30px;
-}
-.teaser-item.second .text {
-  border-left: 1px solid #f2f2f2;
+  border-right: 1px solid #f2f2f2;
+  border-bottom: 1px solid #f2f2f2;
 }
 .teaser-item.special {
   background: #fff;
@@ -6668,9 +6668,25 @@ body {
   border: 24px solid #fff;
   border-color: transparent transparent #fff;
 }
+.teaser-item .date {
+  color: #777;
+  margin-bottom: 16px;
+}
+.news-teasers {
+  margin-bottom: 0;
+}
+.news-teasers .teaser-item .text {
+  background: #fff;
+}
+.news-teasers .teaser-item .image:after {
+  border-bottom-color: #fff;
+}
 .homepage-teasers {
   background: #f7f7f7;
   border-bottom: 1px solid #e6e6e6;
+}
+.news-pagination {
+  margin-top: -1px;
 }
 .products {
   margin-left: -10px;
@@ -6944,14 +6960,14 @@ body {
 .counter-control-set .counter-down {
   left: 0;
   background-image: url(/images/sprite.png);
-  background-position: -371px -40px;
+  background-position: -371px -59px;
   width: 19px;
   height: 19px;
 }
 .counter-control-set .counter-up {
   right: 0;
   background-image: url(/images/sprite.png);
-  background-position: -350px -61px;
+  background-position: -350px -80px;
   width: 19px;
   height: 19px;
 }
@@ -7102,4 +7118,44 @@ body {
   right: 0;
   bottom: 0;
   padding: 30px;
+}
+.reviews-counter {
+  font-size: 16px;
+}
+.reviews-counter strong {
+  font-weight: 600;
+  font-size: 28px;
+  color: #222222;
+  margin-left: 8px;
+}
+.review-item {
+  text-align: center;
+  font-size: 18px;
+  padding: 75px 260px;
+}
+.review-item .title {
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.review-item .text {
+  font-style: italic;
+}
+.review-item .text p {
+  margin: 0;
+  bottom: 0;
+}
+.stars {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.stars .star {
+  background-image: url(/images/sprite.png);
+  background-position: -432px 0px;
+  width: 17px;
+  height: 17px;
+  display: inline-block;
+  padding: 0 3px;
+}
+.review-submit {
+  text-align: center;
 }

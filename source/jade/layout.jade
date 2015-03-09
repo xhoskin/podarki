@@ -5,11 +5,13 @@ html(class="no-js", lang="en")
         include meta
         link(rel="stylesheet" href="#{css}style.css")
         script(src="#{js}lib/jquery-1.10.2.min.js")
-        script(src="#{js}lib/modernizr-2.6.2.min.js")
         script(src="#{js}lib/bootstrap.min.js")
         script(src="#{js}lib/bootstrap-select.min.js")
         script(src="#{js}lib/jquery.backstretch.min.js")
         script(src="#{js}lib/jquery.ezmark.min.js")
+        script(src="#{js}lib/jquery.sliderPro.min.js")
+        script(src="#{js}lib/jquery.fancybox.pack.js")
+        script(src="#{js}lib/owl.carousel.min.js")
         script(src="//localhost:35729/livereload.js")
         title Верстка
     body
@@ -19,7 +21,7 @@ html(class="no-js", lang="en")
                 block header
                 
                 div.page-content.container
-                        block content
+                    block content
             
         footer.page-footer
             block footer

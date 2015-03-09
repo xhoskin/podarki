@@ -11,9 +11,13 @@
 @import "bootstrap-select.less";
 @import "ezmark.less";
 
+@import "slider-pro";
+@import "jquery.fancybox.less";
+@import "owl.carousel.less";
+@import "owl.transitions.less";
+
 @import "non-responsive.less";
 
-//@import "jquery.bxslider.less";
 
 
 //
@@ -159,6 +163,183 @@
     .sprite(@cart-inv);
 }
 
+// ** owl slider
+.owl-buttons { 
+    position: absolute;
+    top: 0;
+    left: -@container-padding;
+    right: -@container-padding;
+
+    >div {
+        padding: 24px 12px;
+        background: #fff;
+        .box-shadow(0 2px 27px rgba(7, 6, 6, 0.29));
+        position: relative;
+        color: @brand-primary;
+        position: absolute;
+        top: 45px;
+
+        &:hover {
+            color: @link-color;
+        }
+
+        &:after {
+            content: "";
+            display: block;
+            border: 8px solid #acacac;
+            border-width: 5px 8px;
+            border-bottom-color: transparent;
+            position: absolute;
+            top: 100%;
+        }
+    }
+    
+    .disabled {
+        color: #ccc;
+        cursor: default!important;
+    }
+
+    .owl-prev {
+        left: -16px;
+
+        &:after {
+            border-left-color: transparent;
+            left: 0;
+        }
+    }
+
+    .owl-next {
+        right: -16px;
+
+        &:after {
+            border-right-color: transparent;
+            right: 0;
+        }
+    }
+}
+
+.owl-pagination {
+    display: block;
+    text-align: center;
+}
+
+.owl-page {
+    .box-sizing(content-box);
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    background: @brand-primary;
+    border-radius: 20px;
+    border: 2px solid transparent;
+    margin: 0 2px;
+    margin-bottom: 2px;
+
+    &.active {
+        width: 9px;
+        height: 9px;
+        background: transparent;
+        border-color: #fff;
+        margin-bottom: 0;
+    }
+
+}
+
+// ** fancy box
+.fancybox-overlay {
+    background: rgba(0, 0, 0, .5);
+}
+
+.fancybox-skin {
+    padding: 40px 30px;
+}
+
+.fancybox-nav { 
+    padding: 24px 12px;
+    background: #fff;
+    .box-shadow(0 2px 27px rgba(7, 6, 6, 0.29));
+    color: @brand-primary;
+    top: 50%;
+    margin-top: -34px;
+    height: auto;
+    width: auto;
+
+    &:after {
+        content: "";
+        display: block;
+        border: 8px solid #acacac;
+        border-width: 5px 8px;
+        border-bottom-color: transparent;
+        position: absolute;
+        top: 100%;
+    }
+
+    >span {
+        .glyphicon;
+        top: auto;
+        left: auto;
+        right: auto;
+        bottom: auto;
+        width: auto;
+        height: auto;
+        margin: 0;
+        background: none;
+        visibility: visible;
+    }
+
+}
+
+.fancybox-prev {
+    left: -46px;
+
+    &:after {
+        border-left-color: transparent;
+        left: 0;
+    }
+
+    >span {
+        .glyphicon-chevron-left;
+    }
+}
+
+.fancybox-next {
+    right: -46px;
+
+    &:after {
+        border-right-color: transparent;
+        right: 0;
+    }
+
+    >span {
+        .glyphicon-chevron-right;
+    }
+}
+
+.fancybox-close {
+    color: @brand-primary;
+    top: -12px;
+    right: 5px;
+    font-size: 38px;
+    position: absolute;
+    z-index: 1;
+    outline:none; 
+    border: 0;
+    width: auto;
+    height: auto;
+    .opacity(1);
+
+    &:before {
+        content: "×";
+    }
+
+}
+
+#fancybox-loading div {
+	width: 44px;
+	height: 44px;
+	background: url("@{img}fancybox_loading.gif") center center no-repeat;
+}
+
+
 
 //
 // == Сетка
@@ -250,7 +431,7 @@
     border-radius: 0;
 
     .nav>li>a {
-        padding: 25px @container-padding;
+        padding: 25px 24px;
         text-transform: uppercase;
         color: @headings-color;
         font-weight: 600;
@@ -285,11 +466,9 @@
     }
 
     .glyphicon-chevron-down {
-        position: absolute;
         color: @brand-primary;
         font-size: 12px;
-        right: 10px;
-        top: 30px;
+        margin-left: 4px;
     }
 
     &:after {
@@ -563,8 +742,39 @@
 
 }
 
+.homepage-slider {
+    margin: -@container-padding -@container-padding 0;
+
+    .owl-pagination {
+        position: absolute;
+        bottom: 25px;
+        left: 0;
+        right: 0;
+    }
+
+    .owl-buttons {
+        left: 0;
+        right: 0;
+        top: 128px;
+    }
+
+}
+
 .homepage-banner {
-    margin-top: -@container-padding;
+    position: relative;
+
+    >.caption {
+        color:#fff;
+        font-size: 16px;
+        position: absolute;
+        top: @container-padding;
+        left: 80px;
+        width: 40%;
+
+        h1, h2, h3 {
+            color: #fff; 
+        }
+    }
 }
 
 .teasers {
@@ -664,10 +874,13 @@
 .products {
     .make-row();
     margin-bottom: -20px;
+
+    .product-item {
+        .make-xs-column(3);
+    }
 }
 
 .product-item {
-    .make-xs-column(3);
     position: relative;
     text-align: center;
     margin-bottom: 20px;
@@ -804,6 +1017,93 @@
         top: 0;
         left: 3px;
         right: 3px;
+    }
+}
+
+// ** Слайдер картинок товара
+.product-pics-slider {
+    padding-left: 109px!important;
+
+    .sp-slide,
+    .sp-thumbnail-container {
+        border-radius: 3px;
+        overflow: hidden;
+    }
+
+    .sp-thumbnail-container {
+        margin-top: 8px;
+        margin-bottom: 8px;
+    }
+
+
+    .sp-left-thumbnails, 
+    .sp-right-thumbnails {
+        top: 40px;
+        bottom: 40px;
+        height: auto!important;
+    }
+
+    .sp-selected-thumbnail {
+        border: 1px solid @brand-primary;
+    }
+
+    .sp-thumbnail-arrow {
+        &:before,
+        &:after {
+            display: none;
+        }
+    }
+
+    .sp-thumbnail-arrows {
+         width: @caret-red-t-width;
+         left: 32px;
+         top: 0;
+    }
+
+    .sp-thumbnail-arrows .sp-thumbnail-arrow {
+         -webkit-transform: rotate(0); 
+        -ms-transform: rotate(0);
+         transform: rotate(0); 
+
+        &:before,
+        &:after {
+            display: none;
+        }
+    }
+
+    .sp-previous-thumbnail-arrow {
+        .sprite(@caret-red-t);
+        top: 0;
+    }
+
+    .sp-next-thumbnail-arrow {
+        .sprite(@caret-red-b);
+        bottom: -460px;
+    }
+
+}
+
+
+// ** Слайдер товаров
+
+.product-list-slider {
+    .make-row();
+
+    .owl-buttons { 
+        .owl-next { 
+            right: -6px;
+        }
+        .owl-prev {
+            left: -6px;
+        }
+    }
+}
+
+.reviews-slider {
+    margin-bottom: 42px;
+
+    .owl-buttons {
+        margin-top: 90px;
     }
 }
 

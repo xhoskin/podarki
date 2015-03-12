@@ -5,9 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE">
     <meta content="telephone=no" name="format-detection">
-    <meta name="viewport" content="width=device-width, initial-scale=1"><!--[if IE]>
-    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../css/style.css">
     <script src="../js/lib/jquery-1.10.2.min.js"></script>
     <script src="../js/lib/bootstrap.min.js"></script>
@@ -37,7 +35,7 @@
                 <div class="row">
                   <div class="header-block basket-block">
                     <div class="title">Корзина</div>
-                    <div class="num"><a href="#">0</a></div>
+                    <div class="num">0</div>
                     <div class="text">Положите товар или услугу</div>
                   </div>
                   <div class="header-block callback-block">
@@ -62,7 +60,7 @@
               <li class="active"><a href="#" data-toggle="dropdown" role="button" class="dropdown-toggle">Продукция              <span class="glyphicon glyphicon-chevron-down"></span></a>
                 <ul role="menu" class="dropdown-menu">
                   <li><a href="#">Свадебный декор</a></li>
-                  <li class="active"><a href="#">Детские праздники</a></li>
+                  <li><a href="#">Детские праздники</a></li>
                 </ul>
               </li>
               <li><a href="#">Отзывы            </a></li>
@@ -79,32 +77,79 @@
         <div class="page-content container">
           <ul class="breadcrumbs">
             <li><a href="#">Главная</a></li>
-            <li><span>Контакты</span></li>
+            <li><a href="#">Продукты</a></li>
+            <li><a href="#">Для свадьбы</a></li>
+            <li><span>Корзина</span></li>
           </ul>
-          <h1 class="page-title">Контакты</h1>
-          <div class="contacts-grid">
-            <div class="row">
-              <div class="col-xs-4">
-                <p>Контактный телефон: </p>
-                <p><strong>8 800 3000 600</strong></p>
-                <p><small>E-mail: <a href="#">pochta@mail.ru</a></small></p>
-              </div>
-              <div class="col-xs-5">
-                <p>График работы:</p>
-                <p><strong>с 10:00 до 19:00 пн.-пт.</strong></p>
-              </div>
-              <div class="col-xs-3 btn-col"><a href="#" class="btn btn-primary">НАПИСАТЬ ПИСЬМО</a></div>
-              <div class="col-xs-12 address-col">
-                <p>Наш адрес: </p>
-                <p><strong>Нижний-Тагил, ул. Ленина, дом 48, офис 1.</strong></p>
+          <h1 class="page-title">Оформление заказа</h1>
+          <div class="base-grid product-description">
+            <div class="main">
+              <div class="h4">Выберите способ получения заказа</div>
+              <form>
+                <div class="row">
+                  <div class="col-xs-6">
+                    <div class="radio delivery-radio">
+                      <label>
+                        <input type="radio" name="optionsRadios" checked>
+                        <div class="title">Доставка</div>
+                        <div class="price">По Нижнему Тагилу  от 120 руб.</div>
+                        <div class="other">Подробней уточняйте у менеджера по телефону 
+                          <div class="phone-span">8 800 3000 600</div>
+                        </div>
+                      </label>
+                    </div>
+                    <div class="form-group address-group">
+                      <label>Укажите адрес</label>
+                      <textarea class="form-control"></textarea>
+                    </div>
+                  </div>
+                  <div class="col-xs-6 delivery-radio">
+                    <div class="radio">
+                      <label>
+                        <input type="radio" name="optionsRadios">
+                        <div class="title">Самовывоз</div>
+                        <div class="price">Бесплатно</div>
+                        <div class="other">г. Нижнний Тагил, ул.  Ленина, дом 48, офис 1</div>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-xs-6">
+                    <div class="h4">Контактные данные </div>
+                    <div class="form-group">
+                      <label>Ваше имя</label>
+                      <input type="text" class="form-control">
+                    </div>
+                    <div class="form-group">
+                      <label>Телефон для связи (обязательное поле)</label>
+                      <input type="text" class="form-control">
+                    </div>
+                    <div class="form-group">
+                      <label>E-mail</label>
+                      <input type="text" class="form-control">
+                    </div>
+                    <div class="form-group">
+                      <label>Комментарий к заказу</label>
+                      <textarea class="form-control"></textarea>
+                    </div>
+                    <div class="form-group submit-group">
+                      <button type="submit" class="btn btn-primary">ОТПРАВИТЬ ЗАКАЗ</button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="sidebar">
+              <div class="side-block basket-confirm">
+                <div class="product-price">
+                  <div class="title">Сумма заказа</div>
+                  <div class="delivery-status"><a href="#">4 товара</a></div>
+                  <div class="value"> <span class="num">30 400</span> руб.
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="map-container">
-            <div class="map-placeholder">
-              <p>Здесь будет карта.<br></p>
-              <p>Вставить ее <strong>вместо </strong>элемента .map-placeholder.</p>
-            </div><img src="../images/map-marker-image.png" style="position:absolute; top:50%; left:50%;">
           </div>
         </div>
       </div>

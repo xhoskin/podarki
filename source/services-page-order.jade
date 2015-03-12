@@ -1,4 +1,4 @@
-//Главная страница
+//Страница услуг - быстрый заказ
 //макет
 
 //Базовый шаблон
@@ -31,7 +31,41 @@ append content
 
     .base-grid.product-description
         .main
-            |Тут будет слайдер
+            .slider-pro.product-pics-slider#product-pics-slider
+                .sp-slides
+                    .sp-slide
+                        img.sp-image(src="http://placehold.it/595x493")
+                    .sp-slide
+                        img.sp-image(src="http://placehold.it/595x493")
+                    .sp-slide
+                        img.sp-image(src="http://placehold.it/595x493")
+                    .sp-slide
+                        img.sp-image(src="http://placehold.it/595x493")
+                    .sp-slide
+                        img.sp-image(src="http://placehold.it/595x493")
+                    .sp-slide
+                        img.sp-image(src="http://placehold.it/595x493")
+                    .sp-slide
+                        img.sp-image(src="http://placehold.it/595x493")
+                    .sp-slide
+                        img.sp-image(src="http://placehold.it/595x493")
+                .sp-thumbnails
+                    .sp-thumbnail
+                        img.sp-thumbnail-image(src="http://placehold.it/95x80")
+                    .sp-thumbnail
+                        img.sp-thumbnail-image(src="http://placehold.it/95x80")
+                    .sp-thumbnail
+                        img.sp-thumbnail-image(src="http://placehold.it/95x80")
+                    .sp-thumbnail
+                        img.sp-thumbnail-image(src="http://placehold.it/95x80")
+                    .sp-thumbnail
+                        img.sp-thumbnail-image(src="http://placehold.it/95x80")
+                    .sp-thumbnail
+                        img.sp-thumbnail-image(src="http://placehold.it/95x80")
+                    .sp-thumbnail
+                        img.sp-thumbnail-image(src="http://placehold.it/95x80")
+                    .sp-thumbnail
+                        img.sp-thumbnail-image(src="http://placehold.it/95x80")
 
         .sidebar
             .side-block.order-block
@@ -62,13 +96,65 @@ append content
                     h2 Красные воздушные шары
                     p Что подарить друзьям и подругам, родным и знакомым на Новый год, День Валентина, 23 февраля, 8 Марта,  День рождения, юбилей, свадьбу и другие торжества? А еще начальнику нужно подобрать подарок и коллегам что-нибудь недорогое... Ломать голову над выбором подарков нам приходится так часто, что иногда мы от этого устаем. Интернет-магазин "ПОДАРКИ 66.ру", мы надеемся, хотя бы отчасти поможет Вам избавиться от "головной боли" при выборе подарков. Подарки для мужчин и женщин, коллег, шефа (а ведь у него все есть!), друзей и знакомых - мы постарались подобрать такие полезные и забавные подарки, которые Вам приятно будет дарить, а получателю подарка ни за что не захочется его передаривать!
 
+    hr
+
+    h2 Популярные услуги
+
     .product-list-slider
-        |Тут будет слайдер товаров
+        .products-slider#products-slider
+            div
+                .product-item 
+                    .inner
+                        section.image
+                            a(href="#"): img(src="http://placehold.it/220x160" width="220" height="160")
+                        .text
+                            .title: a(href="#") Новогодние яички
+                            .price 120 руб.
+            div
+                .product-item 
+                    .inner
+                        section.image
+                            a(href="#"): img(src="http://placehold.it/220x160" width="220" height="160")
+                        .text
+                            .title: a(href="#") Новогодние яички
+                            .price 120 руб.
+            div
+                .product-item 
+                    .inner
+                        section.image
+                            a(href="#"): img(src="http://placehold.it/220x160" width="220" height="160")
+                        .text
+                            .title: a(href="#") Новогодние яички
+                            .price 120 руб.
+            div
+                .product-item 
+                    .inner
+                        section.image
+                            a(href="#"): img(src="http://placehold.it/220x160" width="220" height="160")
+                        .text
+                            .title: a(href="#") Новогодние яички
+                            .price 120 руб.
+            div
+                .product-item 
+                    .inner
+                        section.image
+                            a(href="#"): img(src="http://placehold.it/220x160" width="220" height="160")
+                        .text
+                            .title: a(href="#") Новогодние яички
+                            .price 120 руб.
+            div
+                .product-item 
+                    .inner
+                        section.image
+                            a(href="#"): img(src="http://placehold.it/220x160" width="220" height="160")
+                        .text
+                            .title: a(href="#") Новогодние яички
+                            .price 120 руб.
                 
 append footer
     include jade/footer
 
-    .modal.fade#order-modal
+    .modal#order-modal
         .modal-dialog.modal-lg
             .modal-content
                 button.close.modal-close(type='button', data-dismiss='modal') &times;

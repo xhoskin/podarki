@@ -5,9 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE">
     <meta content="telephone=no" name="format-detection">
-    <meta name="viewport" content="width=device-width, initial-scale=1"><!--[if IE]>
-    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../css/style.css">
     <script src="../js/lib/jquery-1.10.2.min.js"></script>
     <script src="../js/lib/bootstrap.min.js"></script>
@@ -37,7 +35,7 @@
                 <div class="row">
                   <div class="header-block basket-block">
                     <div class="title">Корзина</div>
-                    <div class="num"><a href="#">0</a></div>
+                    <div class="num">0</div>
                     <div class="text">Положите товар или услугу</div>
                   </div>
                   <div class="header-block callback-block">
@@ -62,7 +60,7 @@
               <li class="active"><a href="#" data-toggle="dropdown" role="button" class="dropdown-toggle">Продукция              <span class="glyphicon glyphicon-chevron-down"></span></a>
                 <ul role="menu" class="dropdown-menu">
                   <li><a href="#">Свадебный декор</a></li>
-                  <li class="active"><a href="#">Детские праздники</a></li>
+                  <li><a href="#">Детские праздники</a></li>
                 </ul>
               </li>
               <li><a href="#">Отзывы            </a></li>
@@ -145,7 +143,7 @@
               <div>
                 <div class="product-item"> 
                   <div class="inner">
-                    <section class="image"><a href="#"><img src="http://placehold.it/220x160" width="220" height="160"></a></section>
+                    <media class="image"><a href="#"><img src="http://placehold.it/220x160" width="220" height="160"></a></media>
                     <div class="text">
                       <div class="title"><a href="#">Новогодние яички</a></div>
                       <div class="price">120 руб.</div>
@@ -156,7 +154,7 @@
               <div>
                 <div class="product-item"> 
                   <div class="inner">
-                    <section class="image"><a href="#"><img src="http://placehold.it/220x160" width="220" height="160"></a></section>
+                    <media class="image"><a href="#"><img src="http://placehold.it/220x160" width="220" height="160"></a></media>
                     <div class="text">
                       <div class="title"><a href="#">Новогодние яички</a></div>
                       <div class="price">120 руб.</div>
@@ -167,7 +165,7 @@
               <div>
                 <div class="product-item"> 
                   <div class="inner">
-                    <section class="image"><a href="#"><img src="http://placehold.it/220x160" width="220" height="160"></a></section>
+                    <media class="image"><a href="#"><img src="http://placehold.it/220x160" width="220" height="160"></a></media>
                     <div class="text">
                       <div class="title"><a href="#">Новогодние яички</a></div>
                       <div class="price">120 руб.</div>
@@ -178,7 +176,7 @@
               <div>
                 <div class="product-item"> 
                   <div class="inner">
-                    <section class="image"><a href="#"><img src="http://placehold.it/220x160" width="220" height="160"></a></section>
+                    <media class="image"><a href="#"><img src="http://placehold.it/220x160" width="220" height="160"></a></media>
                     <div class="text">
                       <div class="title"><a href="#">Новогодние яички</a></div>
                       <div class="price">120 руб.</div>
@@ -189,7 +187,7 @@
               <div>
                 <div class="product-item"> 
                   <div class="inner">
-                    <section class="image"><a href="#"><img src="http://placehold.it/220x160" width="220" height="160"></a></section>
+                    <media class="image"><a href="#"><img src="http://placehold.it/220x160" width="220" height="160"></a></media>
                     <div class="text">
                       <div class="title"><a href="#">Новогодние яички</a></div>
                       <div class="price">120 руб.</div>
@@ -200,7 +198,7 @@
               <div>
                 <div class="product-item"> 
                   <div class="inner">
-                    <section class="image"><a href="#"><img src="http://placehold.it/220x160" width="220" height="160"></a></section>
+                    <media class="image"><a href="#"><img src="http://placehold.it/220x160" width="220" height="160"></a></media>
                     <div class="text">
                       <div class="title"><a href="#">Новогодние яички</a></div>
                       <div class="price">120 руб.</div>
@@ -268,6 +266,53 @@
           <div class="developer">Разработка:  <a href="#">AprilStyle</a></div>
         </div>
       </div>
+      <div id="order-modal" class="modal">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <button type="button" data-dismiss="modal" class="close modal-close">&times;</button>
+            <div class="modal-body">
+              <h2 class="modal-title">Быстрый заказ</h2>
+              <div class="order-conclusion">
+                <div class="row">
+                  <div class="title">Оформление свадьбы под ключ</div>
+                  <div class="price">от 1 200 руб.</div>
+                </div>
+              </div>
+              <form class="quick-order-form">
+                <div class="row">
+                  <div class="col-xs-6">
+                    <div class="form-group">
+                      <label>Ваше имя</label>
+                      <input type="text" class="form-control">
+                    </div>
+                    <div class="form-group">
+                      <label>Телефон для связи <small>(обязательное поле)</small></label>
+                      <input type="tel" class="form-control">
+                    </div>
+                    <div class="form-group">
+                      <label>E-mail</label>
+                      <input type="email" class="form-control">
+                    </div>
+                    <div class="form-group submit-group">
+                      <button type="submit" class="btn btn-primary">ОТПРАВИТЬ ЗАКАЗ</button>
+                    </div>
+                  </div>
+                  <div class="col-xs-6">
+                    <div class="form-group">
+                      <label>Комментарий к заказу</label>
+                      <textarea class="form-control"></textarea>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script>
+         
+        $(document).ready(function(){ $('#order-modal').modal('show') });
+      </script>
     </footer>
   </body>
 </html>

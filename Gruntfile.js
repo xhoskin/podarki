@@ -39,7 +39,7 @@ module.exports = function(grunt) {
                 src: ['source/images/sprites/*.png'],
                 dest: 'web/images/sprite.png',
                 destCss: 'source/less/_sprites.less',
-                imgPath: '/images/sprite.png',
+                imgPath: '../images/sprite.png',
                 algorithm: 'alt-diagonal',
                 padding: 2,
                 cssFormat: 'less'
@@ -78,15 +78,15 @@ module.exports = function(grunt) {
             compile: {
                 options: {
                     client: false,
-                    pretty: false,
+                    pretty: true,
                     data: function(dest, src) {
-                        return { "img": "/images/", "js": "/js/", "css": "/css/" }
+                        return { "img": "../images/", "js": "../js/", "css": "../css/" }
                     }
                 },
                 files: [ {
                     expand: true,
                     flatten: true,
-                    src: [ "source/*.jade", "source/jade/*.jade" ],
+                    src: [ "source/*.jade", "source/jade/layout.jade", "source/jade/header.jade", "source/jade/footer.jade" ],
                     dest: "web/templates/",
                     ext: ".html"
                 } ]
@@ -119,7 +119,7 @@ module.exports = function(grunt) {
                             }
                         }
                         
-                        return { "pages": pages, "design": design, "img": "/images/", "js": "/js/", "css": "/css/" };
+                        return { "pages": pages, "design": design, "img": "../images/", "js": "../js/", "css": "../css/" };
                     }
                 },
                 files: {

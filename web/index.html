@@ -1,20 +1,236 @@
-<html>
+<!DOCTYPE html>
+<html lang="en" class="no-js">
     <head>
-        <meta charset="utf-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE" />
-        <meta content="telephone=no" name="format-detection" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Макеты проекта</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE">
+        <meta content="telephone=no" name="format-detection">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--[if IE]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+        <link rel="stylesheet" href="../css/style.css">
+        <script src="../js/lib/jquery-1.10.2.min.js"></script>
+        <script src="../js/lib/bootstrap.min.js"></script>
+        <script src="../js/lib/bootstrap-select.min.js"></script>
+        <script src="../js/lib/jquery.backstretch.min.js"></script>
+        <script src="../js/lib/jquery.ezmark.min.js"></script>
+        <script src="../js/lib/jquery.sliderPro.min.js"></script>
+        <script src="../js/lib/jquery.fancybox.pack.js"></script>
+        <script src="../js/lib/owl.carousel.min.js"></script>
+        <script src="../js/main.js"></script>
+        <!--script(src="//localhost:35729/livereload.js")-->
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+    <script src="../js/lib/html5shiv.min.js"></script>
+    <script src="../js/lib/respond.min.js"></script><![endif]-->
+        <title>Верстка</title>
     </head>
     <body>
-        <table>
-            <tr>
-                <td><a href="/templates/index.html" target="_blank">Главная страница</a>
-                </td>
-                <td><a href="../design/index.jpg" target="_blank">Макет</a>
-                </td>
-            </tr>
-        </table>
+        <script>
+        $.backstretch("../images/bg1440.jpg");
+        </script>
+        <div class="site">
+            <div class="main">
+                <header class="page-header">
+                    <div class="container">
+                        <div class="row">
+                            <div class="logo">
+                                <img src="../images/logo.png" class="logo-pic">
+                            </div>
+                            <div class="extra">
+                                <div class="row">
+                                    <div class="header-block basket-block">
+                                        <div class="title">Корзина</div>
+                                        <div class="num">0</div>
+                                        <div class="text">Положите товар или услугу</div>
+                                    </div>
+                                    <div class="header-block callback-block">
+                                        <div class="title">Телефон для связи</div>
+                                        <div class="num">8 800 3000 600</div>
+                                        <div class="text">пн. - пт. с 10:00 до 19:00</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+                <div class="container">
+                    <div class="navbar main-menu">
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown"><a href="#" data-toggle="dropdown" role="button" class="dropdown-toggle">Услуги<span class="glyphicon glyphicon-chevron-down"></span></a>
+                                <ul role="menu" class="dropdown-menu">
+                                    <li><a href="#">Свадебный декор</a>
+                                    </li>
+                                    <li><a href="#">Детские праздники</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="active"><a href="#" data-toggle="dropdown" role="button" class="dropdown-toggle">Продукция              <span class="glyphicon glyphicon-chevron-down"></span></a>
+                                <ul role="menu" class="dropdown-menu">
+                                    <li><a href="#">Свадебный декор</a>
+                                    </li>
+                                    <li><a href="#">Детские праздники</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Отзывы            </a>
+                            </li>
+                            <li><a href="#">Контакты</a>
+                            </li>
+                        </ul>
+                        <div class="navbar-form navbar-right navbar-search">
+                            <div class="form-group">
+                                <input type="text" placeholder="ПОИСК" class="form-control">
+                                <button type="submit" class="btn glyphicon glyphicon-search"></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="page-content container">
+                    <h1 class="page-title">Сводная страница</h1>
+                    <table class="table table-striped">
+                        <tr>
+                            <td><a href="templates/article.html" target="_blank">Стилевая страница</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><a href="templates/basket.html" target="_blank">Корзина</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><a href="templates/contacts.html" target="_blank">Контакты</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><a href="templates/index.html" target="_blank">Главная страница</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><a href="templates/news.html" target="_blank">Новости</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><a href="templates/order-ok.html" target="_blank">Оформление заказа - слой</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><a href="templates/order.html" target="_blank">Оформление заказа</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><a href="templates/product-level.html" target="_blank">Категории продуктов</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><a href="templates/product-page.html" target="_blank">Страница продукта</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><a href="templates/products-list.html" target="_blank">Список продуктов</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><a href="templates/reviews.html" target="_blank">Отзывы</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><a href="templates/services-level.html" target="_blank">Категории услуг</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><a href="templates/services-page-order.html" target="_blank">Страница услуг - быстрый заказ</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><a href="templates/services-page.html" target="_blank">Страница услуг</a>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <footer class="page-footer">
+            <div class="footer-nav container">
+                <div class="row">
+                    <ul class="lvl-1">
+                        <li><a href="#">Услуги                                                    </a>
+                        </li>
+                        <ul class="lvl-2">
+                            <li><a href="#">Организация свадеб</a>
+                            </li>
+                            <li><a href="#">Украшение  зала</a>
+                            </li>
+                            <li><a href="#">Подготовка</a>
+                            </li>
+                            <li><a href="#">Фольгирование</a>
+                            </li>
+                            <li><a href="#">Оформление </a>
+                            </li>
+                            <li><a href="#">Подбор персонала</a>
+                            </li>
+                        </ul>
+                    </ul>
+                    <ul class="lvl-1">
+                        <li><a href="#">Продукция                                           </a>
+                        </li>
+                        <ul class="lvl-2">
+                            <li><a href="#">Организация свадеб</a>
+                            </li>
+                            <li><a href="#">Украшение  зала</a>
+                            </li>
+                            <li><a href="#">Подготовка</a>
+                            </li>
+                        </ul>
+                    </ul>
+                    <ul class="lvl-1">
+                        <li><a href="#">О компании</a>
+                        </li>
+                        <ul class="lvl-2">
+                            <li><a href="#">Организация свадеб</a>
+                            </li>
+                            <li><a href="#">Украшение  зала</a>
+                            </li>
+                            <li><a href="#">Подготовка</a>
+                            </li>
+                        </ul>
+                    </ul>
+                    <ul class="lvl-1 feedback">
+                        <li>Свяжитесь с нами</li>
+                        <ul class="lvl-2">
+                            <!-- используйте класс .reset-paragraphs, если нужно чтобы внутри блока не было отсупов между абзацами-->
+                            <li class="reset-paragraphs">
+                                <p>Контактный телефон:</p>
+                                <p>
+                                    <strong>8 800 3000 600</strong>
+                                </p>
+                                <p>E-mail: <a href="#">pochta@mail.ru</a>
+                                </p>
+                            </li>
+                            <li class="reset-paragraphs">
+                                <p>Адрес: Нижний-Тагил, ул. Ленина, дом 48, офис 1.</p>
+                            </li>
+                            <li class="reset-paragraphs">
+                                <div class="socials">
+                                    <a href="#" class="sc-vk"></a>
+                                    <a href="#" class="sc-facebook"></a>
+                                    <a href="#" class="sc-twitter"></a>
+                                    <a href="#" class="sc-ok"></a>
+                                    <a href="#" class="sc-google"></a>
+                                </div>
+                            </li>
+                        </ul>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright container">
+                <div class="row">
+                    <div class="shop">© Магазин Креативных Праздников</div>
+                    <div class="developer">Разработка: <a href="#">AprilStyle</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
     </body>
 </html>

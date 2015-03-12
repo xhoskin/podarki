@@ -1,6 +1,31 @@
 //Базовый шаблон
 extends layout
 
+//Подключение mixin
+append includes
+ 
+// Подключение библиотек скриптов
+append library
+
+    
+// Инициализация скриптов
+append init
+
+
+// Шапка
+append header
+    include header
+
 //Контент
 append content
-    table
+    h1.page-title Сводная страница
+
+    table.table.table-striped
+        -each key, index in pages
+            tr
+                td
+                    a(href="templates/#{index}.html" target="_blank")
+                        =key
+
+append footer
+    include footer

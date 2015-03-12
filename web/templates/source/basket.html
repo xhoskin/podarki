@@ -5,9 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE">
     <meta content="telephone=no" name="format-detection">
-    <meta name="viewport" content="width=device-width, initial-scale=1"><!--[if IE]>
-    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../css/style.css">
     <script src="../js/lib/jquery-1.10.2.min.js"></script>
     <script src="../js/lib/bootstrap.min.js"></script>
@@ -37,7 +35,7 @@
                 <div class="row">
                   <div class="header-block basket-block">
                     <div class="title">Корзина</div>
-                    <div class="num"><a href="#">0</a></div>
+                    <div class="num">0</div>
                     <div class="text">Положите товар или услугу</div>
                   </div>
                   <div class="header-block callback-block">
@@ -62,7 +60,7 @@
               <li class="active"><a href="#" data-toggle="dropdown" role="button" class="dropdown-toggle">Продукция              <span class="glyphicon glyphicon-chevron-down"></span></a>
                 <ul role="menu" class="dropdown-menu">
                   <li><a href="#">Свадебный декор</a></li>
-                  <li class="active"><a href="#">Детские праздники</a></li>
+                  <li><a href="#">Детские праздники</a></li>
                 </ul>
               </li>
               <li><a href="#">Отзывы            </a></li>
@@ -79,32 +77,91 @@
         <div class="page-content container">
           <ul class="breadcrumbs">
             <li><a href="#">Главная</a></li>
-            <li><span>Контакты</span></li>
+            <li><a href="#">Продукты</a></li>
+            <li><a href="#">Для свадьбы</a></li>
+            <li><span>Корзина</span></li>
           </ul>
-          <h1 class="page-title">Контакты</h1>
-          <div class="contacts-grid">
-            <div class="row">
-              <div class="col-xs-4">
-                <p>Контактный телефон: </p>
-                <p><strong>8 800 3000 600</strong></p>
-                <p><small>E-mail: <a href="#">pochta@mail.ru</a></small></p>
-              </div>
-              <div class="col-xs-5">
-                <p>График работы:</p>
-                <p><strong>с 10:00 до 19:00 пн.-пт.</strong></p>
-              </div>
-              <div class="col-xs-3 btn-col"><a href="#" class="btn btn-primary">НАПИСАТЬ ПИСЬМО</a></div>
-              <div class="col-xs-12 address-col">
-                <p>Наш адрес: </p>
-                <p><strong>Нижний-Тагил, ул. Ленина, дом 48, офис 1.</strong></p>
+          <h1 class="page-title">Корзина</h1>
+          <div class="base-grid product-description">
+            <div class="main">
+              <div class="basket-list">
+                <div class="basket-item">
+                  <div class="row">
+                    <div class="image image-cell cell"><img src="http://placehold.it/55x60"></div>
+                    <div class="title text-cell cell"><a href="#">Фонтан из воздушных шаров</a></div>
+                    <div class="price text-cell cell">120 руб.</div>
+                    <div class="counter control-cell cell">
+                      <div class="counter-control-set"><a href="#" class="counter-down"></a>
+                        <input type="text" value="1" class="form-control"><a href="#" class="counter-up"></a>
+                      </div>
+                    </div>
+                    <div class="price price-total text-cell cell">240 руб.</div>
+                    <div class="remove cell"><a href="#" class="remove-basket-item">&times;</a></div>
+                  </div>
+                </div>
+                <div class="basket-item">
+                  <div class="row">
+                    <div class="image image-cell cell"><img src="http://placehold.it/55x60"></div>
+                    <div class="title text-cell cell"><a href="#">Фонтан из воздушных шаров</a></div>
+                    <div class="price text-cell cell">120 руб.</div>
+                    <div class="counter control-cell cell">
+                      <div class="counter-control-set"><a href="#" class="counter-down"></a>
+                        <input type="text" value="1" class="form-control"><a href="#" class="counter-up"></a>
+                      </div>
+                    </div>
+                    <div class="price price-total text-cell cell">240 руб.</div>
+                    <div class="remove cell"><a href="#" class="remove-basket-item">&times;</a></div>
+                  </div>
+                </div>
+                <div class="basket-item">
+                  <div class="row">
+                    <div class="image image-cell cell"><img src="../images/no-image-basket.png"></div>
+                    <div class="title text-cell cell"><a href="#">Оформление приглашений, ручная работа.</a></div>
+                    <div class="price text-cell cell">120 руб.</div>
+                    <div class="counter control-cell cell">
+                      <div class="counter-control-set"><a href="#" class="counter-down"></a>
+                        <input type="text" value="1" class="form-control"><a href="#" class="counter-up"></a>
+                      </div>
+                    </div>
+                    <div class="price price-total text-cell cell">240 руб.</div>
+                    <div class="remove cell"><a href="#" class="remove-basket-item">&times;</a></div>
+                  </div>
+                </div>
+                <div class="basket-item">
+                  <div class="row">
+                    <div class="image image-cell cell"><img src="../images/no-image-basket.png"></div>
+                    <div class="title text-cell cell"><a href="#">Фонтан из воздушных шаров</a></div>
+                    <div class="price text-cell cell">120 руб.</div>
+                    <div class="counter control-cell cell">
+                      <div class="counter-control-set"><a href="#" class="counter-down"></a>
+                        <input type="text" value="1" class="form-control"><a href="#" class="counter-up"></a>
+                      </div>
+                    </div>
+                    <div class="price price-total text-cell cell">240 руб.</div>
+                    <div class="remove cell"><a href="#" class="remove-basket-item">&times;</a></div>
+                  </div>
+                </div>
+              </div><a href="#" class="btn btn-default add-basket-btn">Добавить еще товаров</a>
+            </div>
+            <div class="sidebar">
+              <div class="side-block basket-confirm">
+                <div class="product-price">
+                  <div class="title">Общая стоимость</div>
+                  <div class="delivery-status">Без доставки</div>
+                  <div class="value"> <span class="num">30 400</span> руб.
+                  </div>
+                </div>
+                <div class="order-btn-wrap"><a href="#" class="btn btn-primary cart-btn">ОФОРМИТЬ ЗАКАЗ</a></div>
+                <dl class="delivery-info">
+                  <dt class="title">Самовывоз: Бесплатно</dt>
+                  <dd class="value">Нижний-Тагил, ул. Ленина, дом 48, офис 1. (c 10:00 до 19:00)</dd>
+                </dl>
+                <dl class="delivery-info">
+                  <dt class="title">Доставка: от 120 руб.</dt>
+                  <dd class="value">Более точную стоимость доставки можете уточнить у менеджера по телефону: 8 800 300 600</dd>
+                </dl>
               </div>
             </div>
-          </div>
-          <div class="map-container">
-            <div class="map-placeholder">
-              <p>Здесь будет карта.<br></p>
-              <p>Вставить ее <strong>вместо </strong>элемента .map-placeholder.</p>
-            </div><img src="../images/map-marker-image.png" style="position:absolute; top:50%; left:50%;">
           </div>
         </div>
       </div>

@@ -5,9 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE">
     <meta content="telephone=no" name="format-detection">
-    <meta name="viewport" content="width=device-width, initial-scale=1"><!--[if IE]>
-    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../css/style.css">
     <script src="../js/lib/jquery-1.10.2.min.js"></script>
     <script src="../js/lib/bootstrap.min.js"></script>
@@ -37,7 +35,7 @@
                 <div class="row">
                   <div class="header-block basket-block">
                     <div class="title">Корзина</div>
-                    <div class="num"><a href="#">0</a></div>
+                    <div class="num">0</div>
                     <div class="text">Положите товар или услугу</div>
                   </div>
                   <div class="header-block callback-block">
@@ -62,7 +60,7 @@
               <li class="active"><a href="#" data-toggle="dropdown" role="button" class="dropdown-toggle">Продукция              <span class="glyphicon glyphicon-chevron-down"></span></a>
                 <ul role="menu" class="dropdown-menu">
                   <li><a href="#">Свадебный декор</a></li>
-                  <li class="active"><a href="#">Детские праздники</a></li>
+                  <li><a href="#">Детские праздники</a></li>
                 </ul>
               </li>
               <li><a href="#">Отзывы            </a></li>
@@ -79,137 +77,157 @@
         <div class="page-content container">
           <ul class="breadcrumbs">
             <li><a href="#">Главная</a></li>
-            <li><span>Оформление свадьбы под ключ</span></li>
+            <li><a href="#">Продукты</a></li>
+            <li><a href="#">Для свадьбы</a></li>
+            <li><span>Шары</span></li>
           </ul>
-          <h1 class="page-title">Оформление свадьбы под ключ</h1>
-          <div class="base-grid product-description">
+          <h1 class="page-title">Шары</h1>
+          <div class="base-grid">
             <div class="main">
-              <div id="product-pics-slider" class="slider-pro product-pics-slider">
-                <div class="sp-slides">
-                  <div class="sp-slide"><img src="http://placehold.it/595x493" class="sp-image"></div>
-                  <div class="sp-slide"><img src="http://placehold.it/595x493" class="sp-image"></div>
-                  <div class="sp-slide"><img src="http://placehold.it/595x493" class="sp-image"></div>
-                  <div class="sp-slide"><img src="http://placehold.it/595x493" class="sp-image"></div>
-                  <div class="sp-slide"><img src="http://placehold.it/595x493" class="sp-image"></div>
-                  <div class="sp-slide"><img src="http://placehold.it/595x493" class="sp-image"></div>
-                  <div class="sp-slide"><img src="http://placehold.it/595x493" class="sp-image"></div>
-                  <div class="sp-slide"><img src="http://placehold.it/595x493" class="sp-image"></div>
+              <div class="filter"> 
+                <div class="row">
+                  <div class="form-group">
+                    <label>По цене</label>
+                    <select class="form-control selectpicker"> 
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label>По назначению</label>
+                    <select class="form-control selectpicker">
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label>По цвету</label>
+                    <select class="form-control selectpicker">
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                    </select>
+                  </div>
                 </div>
-                <div class="sp-thumbnails">
-                  <div class="sp-thumbnail"><img src="http://placehold.it/95x80" class="sp-thumbnail-image"></div>
-                  <div class="sp-thumbnail"><img src="http://placehold.it/95x80" class="sp-thumbnail-image"></div>
-                  <div class="sp-thumbnail"><img src="http://placehold.it/95x80" class="sp-thumbnail-image"></div>
-                  <div class="sp-thumbnail"><img src="http://placehold.it/95x80" class="sp-thumbnail-image"></div>
-                  <div class="sp-thumbnail"><img src="http://placehold.it/95x80" class="sp-thumbnail-image"></div>
-                  <div class="sp-thumbnail"><img src="http://placehold.it/95x80" class="sp-thumbnail-image"></div>
-                  <div class="sp-thumbnail"><img src="http://placehold.it/95x80" class="sp-thumbnail-image"></div>
-                  <div class="sp-thumbnail"><img src="http://placehold.it/95x80" class="sp-thumbnail-image"></div>
+              </div>
+              <div class="products">
+                <div class="product-item"> 
+                  <div class="bg"></div>
+                  <div class="inner">
+                    <media class="image"><a href="#"><img src="http://placehold.it/220x220" width="220" height="220"></a></media>
+                    <div class="text">
+                      <div class="title"><a href="#">Новогодние яички</a></div>
+                      <div class="price">120 руб.</div>
+                    </div><a class="btn btn-primary cart-btn">В КОРЗИНУ<i class="icon icon-cart-inv"></i></a>
+                  </div>
                 </div>
+                <div class="product-item"> 
+                  <div class="bg"></div>
+                  <div class="inner">
+                    <media class="image"><a href="#"><img src="http://placehold.it/220x220" width="220" height="220"></a></media>
+                    <div class="text">
+                      <div class="title"><a href="#">Новогодние яички</a></div>
+                      <div class="price">120 руб.</div>
+                    </div><a class="btn btn-primary cart-btn">В КОРЗИНУ<i class="icon icon-cart-inv"></i></a>
+                  </div>
+                </div>
+                <div class="product-item"> 
+                  <div class="bg"></div>
+                  <div class="inner">
+                    <media class="image"><a href="#"><img src="http://placehold.it/220x220" width="220" height="220"></a></media>
+                    <div class="text">
+                      <div class="title"><a href="#">Новогодние яички</a></div>
+                      <div class="price">120 руб.</div>
+                    </div><a class="btn btn-primary cart-btn">В КОРЗИНУ<i class="icon icon-cart-inv"></i></a>
+                  </div>
+                </div>
+                <div class="product-item"> 
+                  <div class="bg"></div>
+                  <div class="inner">
+                    <media class="image"><a href="#"><img src="http://placehold.it/220x220" width="220" height="220"></a></media>
+                    <div class="text">
+                      <div class="title"><a href="#">Новогодние яички</a></div>
+                      <div class="price">120 руб.</div>
+                    </div><a class="btn btn-primary cart-btn">В КОРЗИНУ<i class="icon icon-cart-inv"></i></a>
+                  </div>
+                </div>
+                <div class="product-item"> 
+                  <div class="bg"></div>
+                  <div class="inner">
+                    <media class="image"><a href="#"><img src="http://placehold.it/220x220" width="220" height="220"></a></media>
+                    <div class="text">
+                      <div class="title"><a href="#">Новогодние яички</a></div>
+                      <div class="price">120 руб.</div>
+                    </div><a class="btn btn-primary cart-btn">В КОРЗИНУ<i class="icon icon-cart-inv"></i></a>
+                  </div>
+                </div>
+                <div class="product-item"> 
+                  <div class="bg"></div>
+                  <div class="inner">
+                    <media class="image"><a href="#"><img src="http://placehold.it/220x220" width="220" height="220"></a></media>
+                    <div class="text">
+                      <div class="title"><a href="#">Новогодние яички</a></div>
+                      <div class="price">120 руб.</div>
+                    </div><a class="btn btn-primary cart-btn">В КОРЗИНУ<i class="icon icon-cart-inv"></i></a>
+                  </div>
+                </div>
+                <div class="product-item"> 
+                  <div class="bg"></div>
+                  <div class="inner">
+                    <media class="image"><a href="#"><img src="http://placehold.it/220x220" width="220" height="220"></a></media>
+                    <div class="text">
+                      <div class="title"><a href="#">Новогодние яички</a></div>
+                      <div class="price">120 руб.</div>
+                    </div><a class="btn btn-primary cart-btn">В КОРЗИНУ<i class="icon icon-cart-inv"></i></a>
+                  </div>
+                </div>
+              </div>
+              <div class="product-pagination">
+                <ul class="pagination">
+                  <li class="disabled"><a href="#" class="previous">&larr;</a></li>
+                  <li class="active"><a href="#">1</a></li>
+                  <li><a href="#">2</a></li>
+                  <li><a href="#">3</a></li>
+                  <li><a href="#" class="next">&rarr;</a></li>
+                </ul>
               </div>
             </div>
             <div class="sidebar">
-              <div class="side-block order-block">
-                <div class="product-price">
-                  <div class="title">Цена</div>
-                  <div class="value"> <span class="num">120 </span>руб.<span class="counting">10 шт.</span></div>
-                </div>
-                <div class="buttons"> <a class="btn btn-primary cart-btn">В КОРЗИНУ<i class="icon icon-cart-inv"></i></a><a class="btn btn-primary">БЫСТРЫЙ ЗАКАЗ</a></div>
-                <dl class="delivery-info">
-                  <dt class="title">Самовывоз: Бесплатно</dt>
-                  <dd class="value">Нижний-Тагил, ул. Ленина, дом 48, офис 1. (c 10:00 до 19:00)</dd>
-                </dl>
-                <dl class="delivery-info">
-                  <dt class="title">Доставка: от 120 руб.</dt>
-                  <dd class="value">Более точную стоимость доставки можете уточнить у менеджера по телефону: 8 800 300 600</dd>
-                </dl>
+              <div class="affix-block">
+                <ul class="side-menu side-block">
+                  <li class="active"><span>Шары</span> <span class="value">120</span>
+                  </li>
+                  <li><a href="#">Фейерверк</a> <span class="value">120</span>
+                  </li>
+                  <li><a href="#">Платья</a> <span class="value">120</span>
+                  </li>
+                  <li><a href="#">Открытки</a> <span class="value">120</span>
+                  </li>
+                  <li><a href="#">Hand made</a> <span class="value">120</span>
+                  </li>
+                  <li><a href="#">На стол</a> <span class="value">120</span>
+                  </li>
+                  <li><a href="#">Цветы</a> <span class="value">120</span>
+                  </li>
+                  <li><a href="#">Подарки для мужчин</a> <span class="value">120</span>
+                  </li>
+                  <li><a href="#">Подарки для женщин</a> <span class="value">120</span>
+                  </li>
+                  <li><a href="#">Подарки для детей</a> <span class="value">120</span>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
-          <div class="default-tabs product-tabs">
-            <ul role="tablist" class="nav nav-tabs">
-              <li class="active"><a href="#info" data-toggle="tab">Описание</a></li>
-            </ul>
-            <div class="tab-content">
-              <div id="info" class="tab-pane active">
-                <article class="article">
-                  <h2>Красные воздушные шары</h2>
-                  <p>Что подарить друзьям и подругам, родным и знакомым на Новый год, День Валентина, 23 февраля, 8 Марта,  День рождения, юбилей, свадьбу и другие торжества? А еще начальнику нужно подобрать подарок и коллегам что-нибудь недорогое... Ломать голову над выбором подарков нам приходится так часто, что иногда мы от этого устаем. Интернет-магазин "ПОДАРКИ 66.ру", мы надеемся, хотя бы отчасти поможет Вам избавиться от "головной боли" при выборе подарков. Подарки для мужчин и женщин, коллег, шефа (а ведь у него все есть!), друзей и знакомых - мы постарались подобрать такие полезные и забавные подарки, которые Вам приятно будет дарить, а получателю подарка ни за что не захочется его передаривать!</p>
-                </article>
-              </div>
-            </div>
-          </div>
-          <hr>
-          <h2>Популярные услуги</h2>
-          <div class="product-list-slider">
-            <div id="products-slider" class="products-slider">
-              <div>
-                <div class="product-item"> 
-                  <div class="inner">
-                    <section class="image"><a href="#"><img src="http://placehold.it/220x160" width="220" height="160"></a></section>
-                    <div class="text">
-                      <div class="title"><a href="#">Новогодние яички</a></div>
-                      <div class="price">120 руб.</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div>
-                <div class="product-item"> 
-                  <div class="inner">
-                    <section class="image"><a href="#"><img src="http://placehold.it/220x160" width="220" height="160"></a></section>
-                    <div class="text">
-                      <div class="title"><a href="#">Новогодние яички</a></div>
-                      <div class="price">120 руб.</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div>
-                <div class="product-item"> 
-                  <div class="inner">
-                    <section class="image"><a href="#"><img src="http://placehold.it/220x160" width="220" height="160"></a></section>
-                    <div class="text">
-                      <div class="title"><a href="#">Новогодние яички</a></div>
-                      <div class="price">120 руб.</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div>
-                <div class="product-item"> 
-                  <div class="inner">
-                    <section class="image"><a href="#"><img src="http://placehold.it/220x160" width="220" height="160"></a></section>
-                    <div class="text">
-                      <div class="title"><a href="#">Новогодние яички</a></div>
-                      <div class="price">120 руб.</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div>
-                <div class="product-item"> 
-                  <div class="inner">
-                    <section class="image"><a href="#"><img src="http://placehold.it/220x160" width="220" height="160"></a></section>
-                    <div class="text">
-                      <div class="title"><a href="#">Новогодние яички</a></div>
-                      <div class="price">120 руб.</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div>
-                <div class="product-item"> 
-                  <div class="inner">
-                    <section class="image"><a href="#"><img src="http://placehold.it/220x160" width="220" height="160"></a></section>
-                    <div class="text">
-                      <div class="title"><a href="#">Новогодние яички</a></div>
-                      <div class="price">120 руб.</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          <article class="article">
+            <h2>Воздушные шары</h2>
+            <p>Что подарить друзьям и подругам, родным и знакомым на Новый год, День Валентина, 23 февраля, 8 Марта,  День рождения, юбилей, свадьбу и другие торжества? А еще начальнику нужно подобрать подарок и коллегам что-нибудь недорогое... Ломать голову над выбором подарков нам приходится так часто, что иногда мы от этого устаем. </p>
+            <p>Интернет-магазин "ПОДАРКИ 66.ру", мы надеемся, хотя бы отчасти поможет Вам избавиться от "головной боли" при выборе подарков. Подарки для мужчин и женщин, коллег, шефа (а ведь у него все есть!), друзей и знакомых - мы постарались подобрать такие полезные и забавные подарки, которые Вам приятно будет дарить, а получателю подарка ни за что не захочется его передаривать! </p>
+            <h3>Доставка</h3>
+            <p>Доставка подарков на дом или в офис по Нижнему Тагилу от 2500 рублей - БЕСПЛАТНО. Покупку можно оплатить как наличными курьеру, так и по безналичному расчету или кредитными картами Visa и MasterCard.</p>
+          </article>
         </div>
       </div>
     </div>

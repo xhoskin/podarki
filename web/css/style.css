@@ -5504,6 +5504,9 @@ button.close {
     display: none !important;
   }
 }
+.pie {
+  behavior: url("../css/PIE.htc");
+}
 a {
   border-bottom: 1px solid #acc5d9;
   text-decoration: none;
@@ -5555,6 +5558,7 @@ p {
 }
 .container {
   padding: 0 30px;
+  width: 1000px!important;
 }
 .btn {
   padding: 8px 18px;
@@ -5971,7 +5975,7 @@ This must be run when you have at least 2 sprites.
   display: inline-block;
 }
 .ez-radio {
-  background-image: url(/images/sprite.png);
+  background-image: url(../images/sprite.png);
   background-position: -458px -39px;
   width: 18px;
   height: 18px;
@@ -7319,7 +7323,7 @@ body {
 }
 .breadcrumbs a {
   color: #c2649e;
-  border-bottom: 1px solid rgba(194, 100, 158, 0.4);
+  border-bottom: 1px solid #dfb9d0;
   text-decoration: none;
 }
 .breadcrumbs a:hover,
@@ -7414,7 +7418,10 @@ body {
 .pagination > .active {
   z-index: 2;
   background-color: #c2649e;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
   border-radius: 2px;
+  behavior: url("../css/PIE.htc");
   cursor: default;
 }
 .pagination > .active > a,
@@ -7442,7 +7449,7 @@ body {
   display: inline-block;
 }
 .icon-cart-inv {
-  background-image: url(/images/sprite.png);
+  background-image: url(../images/sprite.png);
   background-position: -388px -101px;
   width: 26px;
   height: 24px;
@@ -7462,6 +7469,8 @@ body {
   color: #c2649e;
   position: absolute;
   top: 45px;
+  -pie-box-shadow: 0 2px 27px #ccc;
+  behavior: url("../css/PIE.htc");
 }
 .owl-buttons > div:hover {
   color: #327eaf;
@@ -7476,7 +7485,7 @@ body {
   top: 100%;
 }
 .owl-buttons .disabled {
-  color: #ccc;
+  color: #ccc!important;
   cursor: default!important;
 }
 .owl-buttons .owl-prev {
@@ -7501,21 +7510,27 @@ body {
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
   box-sizing: content-box;
-  display: inline-block;
-  width: 5px;
-  height: 5px;
-  background: #c2649e;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
   border-radius: 20px;
-  border: 2px solid transparent;
-  margin: 0 2px;
-  margin-bottom: 2px;
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  width: 9px;
+  height: 9px;
+  background: #c2649e;
+  margin: 2px 2px;
+  behavior: url("../css/PIE.htc");
 }
 .owl-page.active {
   width: 9px;
   height: 9px;
   background: transparent;
-  border-color: #fff;
-  margin-bottom: 0;
+  border: 2px solid #000;
+  margin: 0 2px;
+}
+.homepage-slider .owl-page.active {
+  border: 2px solid #fff;
 }
 .fancybox-overlay {
   background: rgba(0, 0, 0, 0.5);
@@ -7603,7 +7618,10 @@ body {
 #fancybox-loading div {
   width: 44px;
   height: 44px;
-  background: url("/images/fancybox_loading.gif") center center no-repeat;
+  background: url('../images/fancybox_loading.gif') center center no-repeat;
+}
+.bootstrap-select.btn-group .btn .caret {
+  height: 36px;
 }
 .page-content {
   background: #fff;
@@ -7690,18 +7708,31 @@ body {
   font-weight: 600;
   margin-bottom: 4px;
 }
+.header-block a {
+  display: inline-block;
+  line-height: 1em;
+  color: #fff;
+  border-bottom: 1px solid #938b88;
+  text-decoration: none;
+  margin-bottom: -3px;
+}
+.header-block a:hover,
+.header-block a:focus {
+  border-color: transparent;
+  text-decoration: none;
+}
 .header-block:before {
   content: "";
   display: block;
   position: absolute;
   top: 6px;
   left: 0;
-  background-image: url(/images/sprite.png);
+  background-image: url(../images/sprite.png);
   background-position: 0px -455px;
   width: 62px;
   height: 62px;
 }
-.phone-block:before {
+.callback-block:before {
   background-position: -64px -391px;
 }
 .main-menu {
@@ -7711,7 +7742,10 @@ body {
   margin-right: 12px;
   margin-bottom: 0;
   height: 70px;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
   border-radius: 0;
+  behavior: url("../css/PIE.htc");
 }
 .main-menu .nav > li > a {
   padding: 25px 24px;
@@ -7726,14 +7760,12 @@ body {
 .main-menu .nav > li > a:focus {
   background: #fff;
 }
-.main-menu .nav > .active > a {
-  border-left: 1px solid #e8e8e8;
-  border-right: 1px solid #e8e8e8;
-}
 .main-menu .nav > .active > a,
 .main-menu .nav > .active > a:hover,
 .main-menu .nav > .active > a:focus {
   background: #f4f4f4;
+  border-left: 1px solid #e8e8e8;
+  border-right: 1px solid #e8e8e8;
 }
 .main-menu .open > a,
 .main-menu .open > a:hover,
@@ -7752,7 +7784,7 @@ body {
   position: absolute;
   top: 0;
   left: 100%;
-  background-image: url(/images/sprite.png);
+  background-image: url(../images/sprite.png);
   background-position: -128px -319px;
   width: 42px;
   height: 70px;
@@ -7764,7 +7796,11 @@ body {
   border: 1px solid #efefef;
 }
 .main-menu .dropdown-menu > li > a {
-  padding: 12px 30px;
+  padding: 12px 24px;
+}
+.main-menu .dropdown-menu > .active > a {
+  background: #f4f4f4;
+  color: #444444;
 }
 .navbar-search {
   margin-right: 0;
@@ -7869,11 +7905,15 @@ body {
 .socials > a {
   width: 28px;
   height: 28px;
-  background-image: url(/images/sprite.png);
-  background-color: #252525;
+  background-image: url(../images/sprite.png);
+  -webkit-border-radius: 28px;
+  -moz-border-radius: 28px;
   border-radius: 28px;
+  background-color: #252525;
   margin-right: 8px;
   float: left;
+  behavior: url("../css/PIE.htc");
+  position: relative;
 }
 .socials .sc-vk {
   background-position: -172px -289px;
@@ -8113,8 +8153,8 @@ body {
   display: block;
   position: relative;
 }
-.teaser-item .image:after {
-  content: "";
+.teaser-item .image > .arr {
+  display: block;
   position: absolute;
   bottom: 0;
   left: 45px;
@@ -8140,15 +8180,15 @@ body {
 .teaser-item.special {
   background: #fff;
 }
-.teaser-item.special:after {
-  content: "";
+.teaser-item.special > .special-marker {
   display: block;
   position: absolute;
   top: -1px;
   right: -1px;
   width: 137px;
   height: 103px;
-  background: url("/images/specials.png") no-repeat;
+  background: url("../images/specials.png") no-repeat;
+  z-index: 3;
 }
 .teaser-item.special .image:after {
   border: 24px solid #fff;
@@ -8164,7 +8204,7 @@ body {
 .news-teasers .teaser-item .text {
   background: #fff;
 }
-.news-teasers .teaser-item .image:after {
+.news-teasers .teaser-item .image > .arr {
   border-bottom-color: #fff;
 }
 .homepage-teasers {
@@ -8217,9 +8257,13 @@ body {
   right: 0;
   bottom: -90px;
   background: #fff;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
   -webkit-box-shadow: 0 5px 16px rgba(7, 6, 6, 0.37);
   box-shadow: 0 5px 16px rgba(7, 6, 6, 0.37);
-  border-radius: 3px;
+  border: 1px solid #ddd;
+  behavior: url("../css/PIE.htc");
 }
 .product-item:hover .inner {
   position: relative;
@@ -8266,15 +8310,17 @@ body {
   list-style: none;
   -webkit-box-shadow: 0 5px 9px rgba(7, 6, 6, 0.14);
   box-shadow: 0 5px 9px rgba(7, 6, 6, 0.14);
+  -pie-box-shadow: 0 5px 9px #ccc;
   background: #fff;
   padding: 20px 12px;
   position: relative;
   margin: 0;
+  behavior: url("../css/PIE.htc");
 }
 .side-block:after {
   content: "";
   display: block;
-  background: url("/images/sidebar-pattern.png") no-repeat;
+  background: url("../images/sidebar-pattern.png") no-repeat;
   height: 5px;
   position: absolute;
   top: 100%;
@@ -8288,7 +8334,10 @@ body {
   margin-top: 4px;
 }
 .side-block > li.active {
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
   border-radius: 4px;
+  behavior: url("../css/PIE.htc");
   color: #fff;
   background: #c2649e;
 }
@@ -8304,7 +8353,7 @@ body {
 .side-menu:before {
   content: "";
   display: block;
-  background: url("/images/cross-pattern.png") repeat-x;
+  background: url("../images/cross-pattern.png") repeat-x;
   height: 5px;
   position: absolute;
   top: 0;
@@ -8316,7 +8365,10 @@ body {
 }
 .product-pics-slider .sp-slide,
 .product-pics-slider .sp-thumbnail-container {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
   border-radius: 3px;
+  behavior: url("../css/PIE.htc");
   overflow: hidden;
 }
 .product-pics-slider .sp-thumbnail-container {
@@ -8351,14 +8403,14 @@ body {
   display: none;
 }
 .product-pics-slider .sp-previous-thumbnail-arrow {
-  background-image: url(/images/sprite.png);
+  background-image: url(../images/sprite.png);
   background-position: -355px -127px;
   width: 31px;
   height: 19px;
   top: 0;
 }
 .product-pics-slider .sp-next-thumbnail-arrow {
-  background-image: url(/images/sprite.png);
+  background-image: url(../images/sprite.png);
   background-position: -322px -148px;
   width: 31px;
   height: 19px;
@@ -8517,14 +8569,14 @@ body {
 }
 .counter-control-set .counter-down {
   left: 0;
-  background-image: url(/images/sprite.png);
+  background-image: url(../images/sprite.png);
   background-position: -437px -59px;
   width: 19px;
   height: 19px;
 }
 .counter-control-set .counter-up {
   right: 0;
-  background-image: url(/images/sprite.png);
+  background-image: url(../images/sprite.png);
   background-position: -416px -80px;
   width: 19px;
   height: 19px;
@@ -8707,7 +8759,7 @@ body {
   margin-bottom: 20px;
 }
 .stars .star {
-  background-image: url(/images/sprite.png);
+  background-image: url(../images/sprite.png);
   background-position: -498px 0px;
   width: 17px;
   height: 17px;

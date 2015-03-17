@@ -5232,6 +5232,8 @@ button.close {
 .explainer:after,
 .teasers:before,
 .teasers:after,
+.mini-teasers-list:before,
+.mini-teasers-list:after,
 .products:before,
 .products:after,
 .product-list-slider:before,
@@ -5256,6 +5258,7 @@ button.close {
 .base-grid:after,
 .explainer:after,
 .teasers:after,
+.mini-teasers-list:after,
 .products:after,
 .product-list-slider:after {
   clear: both;
@@ -8158,9 +8161,9 @@ body {
   position: absolute;
   bottom: 0;
   left: 45px;
-  border: 24px solid #f7f7f7;
+  border: 24px solid #fff;
   border-top: 0;
-  border-color: transparent transparent #f7f7f7;
+  border-color: transparent transparent #fff;
 }
 .teaser-item .image img {
   width: 100%;
@@ -8198,6 +8201,34 @@ body {
   color: #777;
   margin-bottom: 16px;
 }
+.mini-teasers-list {
+  margin-left: -12px;
+  margin-right: -12px;
+  background: #fff;
+}
+.mini-teaser {
+  position: relative;
+  float: left;
+  width: 25%;
+  min-height: 1px;
+  padding-left: 12px;
+  padding-right: 12px;
+  color: #222222;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.mini-teaser a {
+  color: #222222;
+}
+.mini-teaser .image {
+  float: left;
+}
+.mini-teaser .text {
+  padding-top: 12px;
+  margin-left: 70px;
+}
 .news-teasers {
   margin-bottom: 0;
 }
@@ -8208,11 +8239,19 @@ body {
   border-bottom-color: #fff;
 }
 .homepage-teasers {
-  background: #f7f7f7;
   border-bottom: 1px solid #e6e6e6;
 }
 .news-pagination {
   margin-top: -1px;
+}
+.all-news-link {
+  background: #f4f4f4;
+  -webkit-box-shadow: inset 0 1px 3px rgba(0,0,0,.25);
+  box-shadow: inset 0 1px 3px rgba(0,0,0,.25);
+  text-align: center;
+  border-bottom: 1px solid #e6e6e6;
+  padding: 4px 0 6px;
+  clear: both;
 }
 .products {
   margin-left: -10px;
